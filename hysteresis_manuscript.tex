@@ -93,8 +93,7 @@ Individuals are complex dynamical systems, whose emotions, cognitions and behavi
 To study the dynamics of their psychological processes, reseachers often measure these individuals at relatively many occasions that are typically closely spaced in time \citep{bolger2013intensive, walls2006models}.
 The data resulting from these measurements are called \textit{intensive longitudinal data} (ILD) or \textit{time series data}, roughly defined to consist of at least 20 measurement occasions.
 Technological advances have caused a enourmous growth in the collection of ILD with the use of ecogical momentary assessments, experience sampling and daily diaries \citep{notimelikethepresent}, resulting in a body of data containing a rich source of information about individual processes.
-However, this source of information remains largely untapped, because conventional statistical models are too restrictive to capture the inherently complex dynamics underpinning psychological phenomena.
-The reason is that researchers often use autoregressive (AR) models, which imply that the process of interest has a symmetric distribution with a constant mean, variance and temporal associations between measurements \citep{box_jenkins, chatfield}.
+However, this source of information remains largely untapped when using conventional statistical models like the autoregressive model of order 1 (AR(1)). These models are often too restrictive to capture the inherently complex dynamics underpinning psychological phenomena, since they imply a symmetric distribution with a constant mean, variance and temporal associations between measurements \citep{box_jenkins, chatfield}.
 However, it is evident that many psychological time series data exhibit nonstandard features, such as skewness \citep{skewness_oisin, skewness_2, skewness_3}, time-varying temporal associations \citep{changing_inertia_1, changing_inertia_2} and bimodality \citep{skewness_oisin, bimodality_han}.
 The inadequacy of AR models in capturing these features has underscored the necessity for alternative modeling approaches.
 
@@ -102,34 +101,35 @@ In the current paper, we focus on modeling approaches to account for bimodality 
 By bimodality, we simply mean that the distribution of the variable of interest has two modes.
 From a dynamical systems perspective, these two modes of the variable of interest correspond to two \textit{stable equilibrium states} or two \textit{regimes} of the underlying system.
 A stable equilibrium state is a state of the system at which it settles in the long run and returns to after small perturbations.
-A regime is a closely related concept, it refers to a mode or pattern of behavior exhibited by the system over an extended period of time, and can be characterized by the stable equilibrium state that the system moves around and/or the rate at which this happens.
+A regime is a closely related concept and refers to a specific pattern of behavior exhibited by the system over an extended period of time, and can be characterized by the stable equilibrium state that the system moves around and/or the rate at which this happens.
 Jumps refer to large sudden changes in the variable of interest.
 These changes occur at a state transition or regime switch, when the system ``jumps'' from one stable equilibrium state to another.
 
-One class of models that was developed to account for the nonstandard features bimodality and large sudden changes is the class of threshold autoregressive (TAR) models \citep{tar}.
-In these time series models, the variable of interest follows a certain regime at each point in time. 
+One class of models that was developed to account for bimodality and large sudden changes is formed by threshold autoregressive (TAR) models \citep{tar}.
+In these time series models, the variable of interest falls within a certain regime at each point in time. 
 The value of a \textit{control variable} determines which regime this is. 
-When the control variable crosses a certain \textit{threshold}, the system shifts into another regime.
+When the control variable crosses a certain \textit{threshold}, the system shifts to another regime.
 For example, the control variable temperature can push a system of water molecules from a solid into a liquid regime, when it crosses a threshold of 0 degrees Celsius.
 
-TAR models fail to account for an interesting regime-swichting phenomenon, however, the phenomenon of hysteresis. 
+But TAR models fail to account for an interesting regime-swichting phenomenon, however, the phenomenon of hysteresis. 
 Hysteresis is present when the switches between two regimes are associated with two different thresholds, one for each direction of the state transition \citep{gilmore, strogatz}.
-As a simple example, under high pressure, water freezes at -4 degrees Celsius and melts at 0 degrees Celcius, so there is a different temperature threshold for the transition from solid to liquid. As a result, a regime switch cannot be reversed as easy as would be the case with one single threshold (when the water would have freezed and melted at 0 degrees Celsius, for example).
+As a simple example, under high pressure, water freezes at -4 degrees Celsius and melts at 0 degrees Celcius, so there is a different temperature threshold for the transition from solid to liquid. As a result, a regime switch cannot be reversed as easy as would be the case when there is a single threshold (when water would have freezed and melted at 0 degrees Celsius, for example).
 This irreversibility of hysteresic switches has intrigued researchers from fields like magnetics, biologiy, ecology, economy, sociology and psychology for a long time \citep{hysteresis_mathematical}.
 
-Currently, hysteresis is often modeled with the (stochastic) cusp catastrophe model. Since this model uses differential equations to describe the system's dynamics, it is quite a challenge to fit this model to intensive longitudinal data \citep{cobb, CT_limitations1, CT_limitations2, cuspfit}. 
-Therefore, the cusp catastrophe model is often fit to cross-sectional data \citep[e.g.,][]{cusp_example_1, cusp_example_2, cusp_example_3}, which heavily impedes any conclusion about dynamics at the individual level \citep{molenaar_manifesto, hamaker_within}.
+Currently, hysteresis is often modeled with the (stochastic) cusp catastrophe model. Since this model uses differential equations to describe the system's dynamics, it is quite a challenge to fit this model to intensive longitudinal data \citep{cobb, CT_limitations1, CT_limitations2, R_cusp}. 
+Instead, the cusp catastrophe model is often fit to cross-sectional data \citep[e.g.,][]{cusp_example_1, cusp_example_2, cusp_example_3}, which heavily impedes any conclusion about dynamics at the individual level \citep{molenaar_manifesto, hamaker_within}.
 As a result, not much is known about hysteresis in psychological processes, yet.
 
-Fortunately, a straightforward adaptation to the TAR model that incorporates the hysteresis effect was recently developed in the field of econometrics \citep{bar2}, the hysteretic TAR (HysTAR) model.
+Fortunately, a straightforward adaptation to the TAR model that incorporates the hysteresis effect was recently developed in the field of econometrics \citep{bar2}, resulting in the hysteretic TAR (HysTAR) model.
 In the current paper, we bring the HysTAR model to the psychological realm in an accessible manner, opening up the possibility to study how hysteretic processes unfold over time, using intensive longitudinal data.
 
 This paper is structured as follows.
 In the next section, we introduce the concept of hysteresis.
-In Section \ref{sec:LS_estimation}, we present the conditional least squares method to estimate the HysTAR model parameters, which we implemented in the accompanying \textsf{R}-package \texttt{hystar} \citep{R, R_hystar}.
-In Section \ref{sec:simulation_study_1}, we present two simulation studies, focussed on parameter estimation and model selection, respectively.
-In Section \ref{sec:empirical_example_1}, we present another simulation study, where we generate time series data from a network of depression symptoms. Here, the research question is whether the HysTAR model can detect the hysteresis effect in the regime switches of this network.
-In Section \ref{sec:empirical_illustration}, we illustrate the use of the HysTAR model with an empirical example of hysteresis in the switches between guessing and stimulus controlled strategies in a simple cognitive task.
+In Section \ref{sec:LS_estimation}, we present the conditional least squares method to estimate the HysTAR model parameters, which was implemented by the first author in the accompanying \textsf{R}-package \texttt{hystar} \citep{R, R_hystar}.
+In Section \ref{sec:simulation_study_1}, we conduct a simulation study to investigate whether hysteresis can be detected with model selection tools.
+In Section \ref{sec:simulation_study_2}, we present another simulation study, focussed on estimation of the threshold parameters.
+In Section \ref{sec:empirical_example_1}, we generate time series data from an empirical network of depression symptoms. Here, the research question is whether the HysTAR model can detect the hysteresis effect in the regime switches of this network.
+Another empricial example is given in Section \ref{sec:empirical_illustration}, where the use of the HysTAR model is demonstrated in an analysis of the speed-accuracy trade-off phenomenon.
 We conclude with a discussion section where we highlight current and future extensions to the HysTAR model.
 
 \section{The hysteretic threshold autoregressive (HysTAR) model} \label{sec:hystar}
@@ -153,8 +153,8 @@ y_t =
 
 where the residuals $\varepsilon_t$ have a mean of 0 and a variance of 1, and are all uncorrelated with each other.
 Note that all AR parameters are allowed to differ between regimes: the intercept $\phi_{j0}$, the autoregressive coefficients $\phi_{j1}, \dots, \phi_{j p_j}$ and the residual standard deviations $\sigma_j$, where $j$ denotes the regime and $p_j$ denotes the order of the AR process, that is, the largest lag that is used in the prediction of $y_t$.
-In this way, regimes can differ in their mean, temporal dynamics and residual variance.
-The mean of $y$ in regime $j$ is given by $\phi_{j0}/(1 - \sum_{i=1}^{p_j} \phi_{ji})$. 
+In this way, regimes can differ in their mean, temporal dynamics, and residual variance.
+The long-run mean of $y$ in regime $j$ is given by $\phi_{j0}/(1 - \sum_{i=1}^{p_j} \phi_{ji})$. 
 The dynamics are described by the autoregressive coefficients, that indicate the extent to which current and past values of $y$ are carried over to future observations.
 Additionally, regime differences in $\sigma$ can indicate different associations between $y$ and unmeasured variables, or different amounts of measurement error.
 
@@ -166,7 +166,7 @@ R_t = \begin{cases}
 \end{cases}
 \end{equation}
 
-where $z$ denotes the control variable, $d$ is a positive integer allowing for a delayed effect of $z$ and $r$ is the threshold parameter, see Figure \ref{fig:simple_vs_hysteretic_2}.
+where $z$ denotes the control variable, $d$ is a positive integer allowing for a delayed effect of $z$ and $r$ is the threshold parameter. The left panel of Figure \ref{fig:simple_vs_hysteretic_2} illustrates how the regime is related to the control variable.
 
 \begin{figure}
 \centering
@@ -178,14 +178,14 @@ For simple switches between regime 0 and 1, there is one threshold, $r$. For hys
 \end{figure}
 
 The switches between regime 0 and 1 have the same threshold, regardless whether the switch is from regime 0 to 1 or from 1 to 0. 
-This may not always be realistic. Sometimes, a switch from 0 to 1 cannot be reversed directly, because the control variable has to move to a different threshold  for a switch from 1 to 0.
+This may not always be realistic: Sometimes, a switch from 0 to 1 cannot be reversed directly, because the control variable has to move to a different threshold  for a switch from 1 to 0.
 For example, increasing external stress experienced by a person might push this person into a ``panick'' regime at a high stress level.
 When the stress decreases again, it is plausible that it has to decrease to a much lower stress level to switch the regime back to ``relaxed''.
 This phenomenon is called hysteresis.
 To transfer the benefits of the TAR model into a model that can also account for hysteresis, \citet{bar2} proposed the hysteretic TAR model.
 
 \subsection{HysTAR model}
-In the hysteretic TAR model (HysTAR, also: buffered AR or hysteretic AR model), the dynamics of the outcome variable $y$ in each regime are modeled in the same way as in the TAR model (Equation \ref{eqn:ar_processes}). The difference is in the regime switching equation:
+In the hysteretic TAR model (HysTAR, also: buffered AR or hysteretic AR model), the dynamics of the outcome variable $y$ in each regime are modeled in the same way as in the TAR model (see Equation \ref{eqn:ar_processes}). The difference is in the regime switching equation, which can be expressed now as
 
 \begin{equation} \label{eqn:hysteretic_switching}
 R_t = \begin{cases}
@@ -195,29 +195,29 @@ R_{t-1} & \mathrm{if} \, r_0 < z_{t-d} \le r_1 \\
 \end{cases}
 \end{equation}
 
-In this equation, the regime $R_t$ remains unchanged when $z_{t-d}$ enters the \textit{hysteresis zone} $(r_0, r_1]$, which leads to the hysteresis effect, see Figure \ref{fig:simple_vs_hysteretic_2}. 
+In this equation, the regime $R_t$ remains unchanged when $z_{t-d}$ enters the \textit{hysteresis zone} $(r_0, r_1]$, which leads to the hysteresis effect. In the Figure \ref{fig:simple_vs_hysteretic_2}, it is illustrated how the HysTAR model differs from the TAR model.
 That is, a switch from regime 0 to regime 1 happens when $z_{t-d}$ crosses $r_1$, but for a switch back from regime 1 to regime 0, $z_{t-d}$ has to cross the lower threshold $r_0$.
-Note that the HysTAR model is equivalent to the TAR model if $r_0 = r_1$. So, the TAR model is nested under the HysTAR model.
+Note that the HysTAR model is equivalent to the TAR model if $r_0 = r_1$; hence, the TAR model is nested under the HysTAR model.
 
 \section{Model estimation and inference}
 \label{sec:LS_estimation}
-We take it as a starting point that we already have established that there is threshold non-linearity in the observed data, for example by following the procedure proposed by \citet{testing_for_threshold_nonlinearity}, and now want to determine whether there hysteresis in the mechanics underlying the regime switches.
+We take it as a starting point that we already have established that there is threshold non-linearity in the observed data, for example by following the procedure proposed by \citet{testing_for_threshold_nonlinearity}, and now want to determine whether there is hysteresis in the mechanics underlying the regime switches.
 Since the TAR model and HysTAR model only differ in the hysteresis effect, we can compare the model fit of the TAR model to the fit of the HysTAR model to detect hysteresis. This is described in Section \ref{sec:model_selection} and demonstrated in Section \ref{sec:simulation_study_1}.
 But first, we providen some tools for parameter estimation and inference.
 
 We implemented the least squares method proposed by \citet{bar2} to estimate the parameters of the HysTAR model in \textsf{R} \citep{R, R_hystar}, which we will briefly describe here.
 For conciseness, we introduce the following notation.
 Let $\phi = (\phi_{00}, \dots, \phi_{0 p_{0\max}}, \phi_{10}, \dots, \phi_{1 p_{1\max}})$ denote the  vector of AR coefficients, where $p_{0\max}$ and $p_{1\max}$ are the maximum orders we want to consider.
-Let $d_{\max}$ denote the maximum delay we want to have.
+Let $d_{\max}$ denote the maximum delay we want to consider.
 Let $r = (r_0, r_1)$ denote the vector of thresholds, where $r_0 \le r_1$.
 Further, let $\sigma = (\sigma_{0}, \sigma_{1})$ denote the  vector of residual standard deviations.
 
-For a given $p_0 \le p_{0\max}$ and $p_1 \le p_{1\max}$, our estimates of $\phi$, $r$, $d$ are the values that minimize the sum of squared errors
+For a given $p_0 \le p_{0\max}$ and $p_1 \le p_{1\max}$, our estimates of $\phi$, $r$, and $d$ are the values that minimize the sum of squared errors
 \begin{equation} \label{eqn:sse}
 L(\phi, r, d) := \sum_{t = k}^{T-1} (y_t - \hat{y}_t)^2,
 \end{equation}
 
-where
+\noindent where
 \begin{equation}
 \hat{y}_t = 
 \begin{cases}
@@ -229,8 +229,7 @@ where
 \end{equation}
 
 To select the appropriate orders $p_0$ and $p_1$, we cannot use least squares estimation, because the different orders have different numbers of $\phi$ parameters, and more $\phi$ parameters will always lead to lower values of $L(\phi, r, d)$. For this purpose, we use information criteria (Section \ref{sec:selecting_AR_orders}).
-Also note that we start the summation of Equation \ref{eqn:sse} at $t = k :=\max\{d_{\max}, p_{0\max}, p_{1\max}\}$. 
-Earlier observations cannot be modeled, because these would need lagged observations $y_{t-p_0}$, $y_{t-p_1}$ or $z_{t-d}$ that are unobserved.
+Also note that we start the summation of Equation \ref{eqn:sse} at $t = k :=\max\{d_{\max}, p_{0\max}, p_{1\max}\}$; the reason for this is that earlier observations cannot be modeled, because these would need lagged observations $y_{t-p_0}$, $y_{t-p_1}$, or $z_{t-d}$ that are unobserved.
 
 \subsection{Parameter estimation} 
 \label{sec:estimation}
@@ -241,12 +240,12 @@ This is solved by minimizing $L(\phi, r, d)$ over a discrete set.
 In the \texttt{hystar} package, this set consists of values that lie between the ordered observed values of $z$.
 For example, when $z = (2, 4, 8, 6)$, these values are $\{3, 5, 7\}$.
 Then, the search set of $\hat{r} = (\hat{r}_0, \hat{r}_1)$ would be $\{(3, 3), (3, 5), (3, 7), (5,5), (5, 7), (7, 7)\}$, since $\hat{r}_0 \le \hat{r}_1$ by design. Note that an estimate of 3 for $r_0$ is actually equivalent to all other values in the range $[2, 4]$ in this case.
-In practice, only the 80\% inner sample range of $z$ is used, to make sure that there are enough time points assigned to both regimes.
+In practice, often only the 80\% inner sample range of $z$ is used, to make sure that there are enough time points assigned to both regimes.
 
-The sum of squared residuals is also not differentiable w.r.t. the delay parameter $d$, because $d$ takes on integer values. Therefore, the delay is optimized over the set $\{0, 1, \dots, d_{\max}\}$, where $d_{\max}$ is up to the researcher.
+The sum of squared residuals is also not differentiable with respect to the delay parameter $d$, because $d$ takes on integer values. Therefore, the delay is optimized over the set $\{0, 1, \dots, d_{\max}\}$, where $d_{\max}$ is up to the researcher.
 
-Fortunately, $L(\phi, r, d)$ is differentiable with respect to $\phi$ given $r$ and $d$. A closed form solution exists for the estimator $\hat{\phi}$ that minimizes the sum of squared errors, see Appendix \ref{app:estimation}. 
-In this way, we can compute $\hat{\phi}$ for the finite combinations of $\hat{r}$ and $\hat{d}$ and select the solution that minimizes the sum of squared errors.
+Fortunately, $L(\phi, r, d)$ is differentiable with respect to $\phi$ given $r$ and $d$. A closed form solution exists for the estimator $\hat{\phi}$ that minimizes the sum of squared errors (see Appendix \ref{app:estimation}). 
+In this way, we can compute $\hat{\phi}$ for the finite combinations of $\hat{r}$ and $\hat{d}$, and select the solution that minimizes the sum of squared errors.
 
 Finally, we can obtain estimates of the residual standard deviations in the following way. Denote the number of observations $k, \dots, T$ in regime $j$ by $n_j$. Then, the estimate of $\sigma_{j}$ is given by
 
@@ -257,7 +256,7 @@ Finally, we can obtain estimates of the residual standard deviations in the foll
 \subsection{Estimation challenges}
 Estimating the HysTAR model comes with two challenges that are not present in the standard TAR model.
 First, the first regime $R_k$ may be undetermined for certain values of $\hat{r}$ and $\hat{d}$. 
-This can be the case when the observation that determines the first regime, $z_{k-d}$, is in the hysteresis zone.
+This can be the case when the observation that determines the first regime, $z_{k-d}$, falls in the hysteresis zone.
 A straightforward solution is to apply the estimation procedure to the cases where $y$ starts in regime 0 and where $y$ starts in regime 1, and choose the estimates with the smaller sum of squared errors.
 However, when one of the AR orders is larger than the delay, there might be observations before $z_{k-d}$ that can inform us about the starting regime, if (one of) these are outside the hysteresis zone, see Figure \ref{fig:unknown_start}.
 
@@ -265,21 +264,21 @@ However, when one of the AR orders is larger than the delay, there might be obse
 \begin{center}
 \includegraphics[scale=.6]{unknown_start.png}
 \caption{\textit{Two situations where we want to determine the regime at time point $k$. 
-If $k = d$, then $z_{k-d-1} = z_{-1}$ is unobserved. Hence, $R_{k-1}$ cannot be determined, so $R_{k}$ can also not be determined. We tackle this scenario by estimating the parameters for $R_k = 0$ and for $R_k = 1$ and choosing the solution that yields the smaller sum of squared errors. 
+If $k = d$, then $z_{k-d-1} = z_{-1}$ is unobserved. Hence, $R_{k-1}$ cannot be determined, so $R_{k}$ can also not be determined. We tackle this scenario by estimating the parameters twice, once while assigning $R_k = 0$, and a second time while assigning $R_k = 1$. Then, we choose the solution that yields the smallest sum of squared errors.
 If $k > d$, we can have an interesting situation, since we have observations before $z_{k-d}$. 
-Those observations $z_{0}, \dots, z_{k - d - 1}$ could be used to determine the regime at time point $k$, if at least one of them falls outside the hysteresis zone. This solution is implemented in the \texttt{hystar} package. 
+Those observations $z_{0}, \dots, z_{k - d - 1}$ could be used to determine the regime at time point $k$, if at least one of them falls outside the hysteresis zone (see Figure \ref{fig:unknown_start}). This solution is implemented in the \texttt{hystar} package. 
 However, if all $z_{0}, \dots, z_{k - d - 1}$ are in the hysteresis zone, we have to use the solution for the first scenario. (Note that $k < d$ is not possible by definition of $k$.)}}
 \label{fig:unknown_start}
 \end{center}
 \end{figure}
 
-Second, suppose we have two consecutive time points with the same regime, so $R_t = R_{t+1}$. This can result from two situations. First, $z_{t - d}$ and $z_{t - d + 1}$ are both outside the hysteresis zone or, second, $z_{t - d}$ is outside the hysteresis zone but $z_{t - d + 1}$ is inside the hysteresis zone. Both of these situations lead to the same sum of squared errors, because the series of regimes are exactly the same, but have different values for $r$.
+Second, suppose we have two consecutive time points with the same regime, so $R_t = R_{t+1}$. This can result from two situations. First, $z_{t - d}$ and $z_{t - d + 1}$ are both outside the hysteresis zone, or second, $z_{t - d}$ is outside the hysteresis zone but $z_{t - d + 1}$ is inside the hysteresis zone. Both of these situations lead to the same sum of squared errors, because the series of regimes are exactly the same, but have different values for $r$.
 In practice, we could choose the more conservative estimate (with the smallest hysteresis zone) and report equivalent estimates. Similarly, different estimates of $d$ can yield the same results (albeit with different threshold estimates associated with them). 
-In that case, the convention is to choose the smallest $d$, which is more parsimonious \citep[][default in the \texttt{hystar}-package]{bar2}.
+In that case, the convention is to choose the smallest $d$, which is more parsimonious \citep{bar2}, this is the default in the \texttt{hystar}-package.
 
 \subsection{Parameter inference}
 To draw conclusions about the parameter estimates, we need standard errors of the (asymptotic) sampling distributions of the estimators.
-The estimator of the $\phi$-parameters are asymptotically normal \citep{bar2}, and we can obtain their standard errors analytically, see Appendix \ref{app:inference}.
+The estimator of the $\phi$-parameters are asymptotically normal \citep{bar2}, and we can obtain their standard errors analytically (see Appendix \ref{app:inference}).
 The delay parameter $d$ is an integer, so $\hat{d}$ will equal $d$ when $T$ is large \citep{bar2}.
 For the threshold parameters, however, we face a challenge, that is also known from threshold inference in the TAR model. 
 The limiting distribution of $\hat{r}$ does not have a closed form and is very hard to approximate numerically \citep{bar2, li_least_2012}.
@@ -314,25 +313,23 @@ Note that we use $\hat{p}_j + 2$ for the number of parameters within a regime, n
 Since the standard error of the threshold estimator is unknown, it cannot be used to choose between the TAR model and the HysTAR model.
 Otherwise, overlapping confidence intervals for the estimates of $r_0$ and $r_1$ could indicate a preference for the TAR model, where $r_0$ and $r_1$ are equal.
 Unfortunately, we can also not use a likelihood-ratio test to compare the HysTAR to the TAR model (G. Li, personal communication, June 1, 2023).
-\footnote{But there exists a likelihood-ratio test for comparison of the HysTAR to the AR model \citep{bar1}}
 So, we need an alternative approach to assess whether hysteresis is present in the dynamics of the system under investigation.
 
 In the current paper, we propose to estimate information criteria for both models, and select the model with smaller values.
 Note that the information criteria presented in Section \ref{sec:selecting_AR_orders} do not penalize the threshold parameter(s), and that the HysTAR model has one threshold parameter more than the TAR model.
 Ignoring this difference may lead to overfitting of the HysTAR model.
-Therefore, we adopt an AIC-type information criterion developed for change point models \citep[AICcp][]{aiccp}, where the penalty of a threshold parameter is 6:
+Therefore, we adopt an AIC-type information criterion developed for change point models \citep[AICcp][]{aiccp}, where the penalty of a threshold parameter is 6, that is,
 
 \begin{equation}
 \label{eq:aiccp}
 AIC_{CP} = \sum_{j = 0}^{1} \Big(n_j \log \hat{\sigma}_{j}^2 + 2(\hat{p}_j + 2) \Big) + 6a,
 \end{equation}
 
-where $a$ is the number of thresholds.
+\noindent where $a$ is the number of thresholds.
 
 Additionally, we can assess whether the residuals of the model follow a white noise process, which should be the case according to both models.
 Since the observations of a white noise process are all uncorrelated with each other, we can check whether the autocorrelations of the residuals are not significantly different from zero.
 This can be done at once with the Ljung-Box test, for example, that tests the null-hypothesis that the autocorrelations are zero \citep{ljungbox}, but also by visualizing the autocorrelation function (ACF) of the residuals.
-
 We assess the performance of the model selection methods presented here in a simulation study 1 (Section \ref{sec:simulation_study_1}).
 
 \section{Simulation study 1: Model selection}
@@ -344,13 +341,13 @@ And how large does the hysteresis zone need to be?
 These questions are addressed in simulation study 1.
 
 \subsection{Simulation setup}
-In simulation study 1, we generate 500 replications of time series of the control variable $z$ and the outcome variable $y$ from the HysTAR model with these varying conditions: 50, 100, 200 and 400 time points, 2, 5, and 10 regime switches (denoted by $N_{\mathrm{rs}}$), (un)equal means/(un)equal autoregression between the regimes, and hysteresis zones $(0, 0]$, $(-0.25, 0.25]$ and $(-0.5, 0.5]$.
+In simulation study 1, we considered the following conditions: 50, 100, 200 and 400 time points, 2, 5, and 10 regime switches (denoted by $N_{\mathrm{rs}}$), (un)equal means and (un)equal autoregression between the regimes, and hysteresis zones $(0, 0]$, $(-0.25, 0.25]$ and $(-0.5, 0.5]$. For each condition, we generated 500 replications of time series of the control variable $z$ and the outcome variable $y$ from the HysTAR model.
 
 This results in a total of $4 \times 3 \times 3 \times 3 = 108$ conditions.
 To obtain the differences in regimes in means and autoregression, we use $\phi = (\phi_{00}, \phi_{01}, \phi_{10}, \phi_{11}) = (0, 0.6, 0, 0.2)$, $(0, 0.6, 3, 0.2)$ and $(0, 0.4, 3, 0.4)$. Note that the means of regime $j$ is given by $\phi_{j0}/(1 - \phi_{0j})$.
 In all conditions, we set the delay parameter to $d = 0$ and use equal residual variances in the regimes, $\sigma_0^2 = \sigma_1^2 = 1$. 
 Furthermore, to control the number of regime switches, the time series of the control variable is a sine wave, going up and down between $-1$ and $1$ the desired number of times.
-Since hysteresis zones are centered around zero, this results in an equal amount of observations in both regimes for 2 and 10 switches, and slightly more observations in regime 0 when there are 5 regime switches.
+Since hysteresis zones are centered around zero in the current setup, this results in an equal amount of observations in both regimes for 2 and 10 switches, and slightly more observations in regime 0 when there are 5 regime switches.
 In Figure \ref{fig:ts_examples}, we give three examples of time series generated from the HysTAR model.
 
 \begin{figure} 
@@ -363,11 +360,11 @@ In Figure \ref{fig:ts_examples}, we give three examples of time series generated
 \label{fig:ts_examples}
 \end{figure}
 
-To detect the hysteresis effect, we fit the HysTAR model and TAR model to each data set within a condition.
-The AIC, BIC, small sample corrected AIC (AICc) and change point AIC (AICcp) are used to select the HysTAR or TAR model, by choosing the model with the smaller estimate.
-In case of equal information criteria, we select the TAR model, because it is more parsimonious (this will happen when the HysTAR threshold estimates are equal, which is not unlikely when the TAR model is the true model). 
+To see whether we can detect the hysteresis effect, we fit the HysTAR model and TAR model to each data set within a condition.
+The AIC, BIC, AICc AICcp are used to select the HysTAR or TAR model, by choosing the model with the smaller value.
+In case of equal values for an information criterion, we select the TAR model, because it is more parsimonious (this will happen when the HysTAR threshold estimates are equal, which is not unlikely when the TAR model is the true model). 
 Additionally, we conduct the Ljung-Box test on the residuals of both models, to test the hypotheses that the residuals are uncorrelated.
-A significant result from the Ljung-Box test implies that the residuals are correlated, and hence, a model does not fit well.
+A significant result from the Ljung-Box test implies that the residuals are correlated, and hence, a model does not capture the dependencies in the data well.
 We select a model when the $p$-value of its Ljung-Box test is non-significant ($>0.05$) and for the other model it is significant. Otherwise, the choice remains undecided.
 
 In fitting the models, we assume the orders of the regimes known, because we want to focus on model selection between the HysTAR and the TAR model rather than order selection, which is also typically done by comparing information criteria. 
@@ -378,9 +375,11 @@ Of course, this is not needed in practice, where $z$ will behave less predictabl
 
 \subsection{Results}
 \label{sec:model_selection_results}
-In Table \ref{tab:model_selection_results}, we present the proportion of correctly selected models according to the BIC and AICcp within each condition. The results of the AIC and AICc are omitted, since their values are very similar to the BIC. In general, we see that information criteria can detect hysteresis if the regimes have different means and $T$ is sufficiently large. 
+The code to reproduce this simulation study can be found in the online supplementary materials.
+\footnote{\url{https://github.com/daandejongen/hysteresis_paper}}
+In Table \ref{tab:model_selection_results}, we present the proportion of correctly selected models according to the BIC and AICcp within each condition. Results of the AIC and AICc are omitted here, because their values are very similar to the BIC. In general, we see that information criteria can detect hysteresis if the regimes have different means and $T$ is sufficiently large. 
 The Ljung-Box test was not able to detect the HysTAR model very well. However, the test has a very high \textit{precision} (also: positive predictive value), for many conditions 100\%. So when there is hysteresis, comparing the Ljung-Box results does not indicate hysteresis very often. But when the Ljung-Box comparison is positive, hysteresis is nearly always present.
-Its results are provided in the supplementary material, as well as the code to reproduce this simulation study.
+Its results are provided in the supplementary material, as well as 
 
 When we compare the BIC to the AICcp, we see that the AICcp performs better when the data are generated from a TAR model, and the BIC performs better when the data are generated from HysTAR model. This is unsurprising at first glance, since the AICcp penalizes the HysTAR model 6 points harder than the TAR model. Interestingly, it does not seem to matter much how large the hysteresis zone is, when the HysTAR is the true model.
 	This difference between the BIC and AICcp is especially pronounced in the case where the regimes have the same mean. Apparently, the BIC value of the HysTAR model is only slightly higher than that of the TAR model in this case, such that the threshold penalty in the AICcp leads to a preference for TAR model. However, regardless of whether the correct type of model is selected or not in this case, the results in simulation study 2 (\ref{sec:simulation_study_2}) show that the estimators of the thresholds have very large bias and variance. Hence, results from both models are hard to interpret.
@@ -621,15 +620,13 @@ Finally, we like to stress that we think the HysTAR model should be primarily us
 The HysTAR model does not really explain anything about the mechanics underlying the hysteresis effect.
 For this purpose, we need to formulate and test formal models that represent the systems underlying the hysteretic process. Then, the HysTAR model can be useful to confirm that a formal model can produce the hysteresis effect.
 
-\section{Acknowledgements}
+\paragraph{Acknowledgements}
 This study is part of a project that has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement No xxxx).
+\paragraph{Materials} All code to reproduce the simulation studies, empirical analyses and figures presented in the main text are available from \url{https://github.com/daandejongen/hysteresis_paper}.
 
-\newpage
 \bibliographystyle{apacite}
 \bibliography{refs_hyst.bib}
 
-
-\newpage
 \appendix
  
 \section{Least squares estimation of $\phi$ given $r$ and $d$}
