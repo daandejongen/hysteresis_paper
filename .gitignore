@@ -4,7 +4,7 @@
 .Ruserdata
 
 # latex output files
-hysteresis_manuscript.synctex.gz
-hysteresis_manuscript.out
-hysteresis_manuscript.log
-hysteresis_manuscript.aux
+*.synctex.gz
+*.out
+*.log
+*.aux
