@@ -1,0 +1,144 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{bolger2013intensive,walls2006models}
+\citation{notimelikethepresent}
+\citation{box_jenkins,chatfield}
+\citation{skewness_oisin,skewness_2,skewness_3}
+\citation{changing_inertia_1,changing_inertia_2}
+\citation{skewness_oisin,bimodality_han}
+\citation{tar}
+\citation{gilmore,strogatz}
+\citation{hysteresis_mathematical}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.1}\protected@file@percent }
+\citation{cobb,CT_limitations1,CT_limitations2,R_cusp}
+\citation{cusp_example_1,cusp_example_2,cusp_example_3}
+\citation{molenaar_manifesto,hamaker_within}
+\citation{bar2}
+\citation{R,R_hystar}
+\citation{tar}
+\citation{tar_in_economics}
+\citation{tar_affect_person1,tar_affect_person2}
+\citation{tar_affect_dyadic1,tar_affect_dyadic2}
+\citation{tar}
+\@writefile{toc}{\contentsline {section}{\numberline {2}The hysteretic threshold autoregressive (HysTAR) model}{3}{section.2}\protected@file@percent }
+\newlabel{sec:hystar}{{2}{3}{The hysteretic threshold autoregressive (HysTAR) model}{section.2}{}}
+\citation{bar2}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}TAR model}{4}{subsection.2.1}\protected@file@percent }
+\newlabel{eqn:ar_processes}{{1}{4}{TAR model}{equation.2.1}{}}
+\newlabel{eqn:simple_switching}{{2}{4}{TAR model}{equation.2.2}{}}
+\citation{testing_for_threshold_nonlinearity}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Regime switching in the TAR model (left) and in the HysTAR model (right). On the $y$-axis, we see the regimes, which can be 0 or 1. On the $x$-axis, we see the control variable. The black lines represents which regime is active for different levels of the control variable. The dotted arrows represent the sudden jumps between regimes. For simple switches between regime 0 and 1, there is one threshold, $r$. For hysteretic switching, the switch from 0 to 1 has a threshold of $r_1$ and the switch from 1 to 0 has a threshold of $r_0$. Note that both regimes are possible when the control variable is between $r_0$ and $r_1$, which is called the hysteresis zone.\relax }}{5}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:simple_vs_hysteretic_2}{{1}{5}{Regime switching in the TAR model (left) and in the HysTAR model (right). On the $y$-axis, we see the regimes, which can be 0 or 1. On the $x$-axis, we see the control variable. The black lines represents which regime is active for different levels of the control variable. The dotted arrows represent the sudden jumps between regimes. For simple switches between regime 0 and 1, there is one threshold, $r$. For hysteretic switching, the switch from 0 to 1 has a threshold of $r_1$ and the switch from 1 to 0 has a threshold of $r_0$. Note that both regimes are possible when the control variable is between $r_0$ and $r_1$, which is called the hysteresis zone.\relax }{figure.caption.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}HysTAR model}{5}{subsection.2.2}\protected@file@percent }
+\newlabel{eqn:hysteretic_switching}{{3}{5}{HysTAR model}{equation.2.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Model estimation and inference}{5}{section.3}\protected@file@percent }
+\newlabel{sec:LS_estimation}{{3}{5}{Model estimation and inference}{section.3}{}}
+\citation{bar2}
+\citation{R,R_hystar}
+\newlabel{eqn:sse}{{4}{6}{Model estimation and inference}{equation.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Parameter estimation}{6}{subsection.3.1}\protected@file@percent }
+\newlabel{sec:estimation}{{3.1}{6}{Parameter estimation}{subsection.3.1}{}}
+\citation{bar2}
+\citation{bar2}
+\citation{bar2}
+\citation{bar2,li_least_2012}
+\citation{R_NTS}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Estimation challenges}{7}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Parameter inference}{7}{subsection.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textit  {Two situations where we want to determine the regime at time point $k$. If $k = d$, then $z_{k-d-1} = z_{-1}$ is unobserved. Hence, $R_{k-1}$ cannot be determined, so $R_{k}$ can also not be determined. We tackle this scenario by estimating the parameters twice, once while assigning $R_k = 0$, and a second time while assigning $R_k = 1$. Then, we choose the solution that yields the smallest sum of squared errors. If $k > d$, we can have an interesting situation, since we have observations before $z_{k-d}$. Those observations $z_{0}, \dots  , z_{k - d - 1}$ could be used to determine the regime at time point $k$, if at least one of them falls outside the hysteresis zone (see Figure \ref  {fig:unknown_start}). This solution is implemented in the \texttt  {hystar} package. However, if all $z_{0}, \dots  , z_{k - d - 1}$ are in the hysteresis zone, we have to use the solution for the first scenario. (Note that $k < d$ is not possible by definition of $k$.)}\relax }}{8}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:unknown_start}{{2}{8}{\textit {Two situations where we want to determine the regime at time point $k$. If $k = d$, then $z_{k-d-1} = z_{-1}$ is unobserved. Hence, $R_{k-1}$ cannot be determined, so $R_{k}$ can also not be determined. We tackle this scenario by estimating the parameters twice, once while assigning $R_k = 0$, and a second time while assigning $R_k = 1$. Then, we choose the solution that yields the smallest sum of squared errors. If $k > d$, we can have an interesting situation, since we have observations before $z_{k-d}$. Those observations $z_{0}, \dots , z_{k - d - 1}$ could be used to determine the regime at time point $k$, if at least one of them falls outside the hysteresis zone (see Figure \ref {fig:unknown_start}). This solution is implemented in the \texttt {hystar} package. However, if all $z_{0}, \dots , z_{k - d - 1}$ are in the hysteresis zone, we have to use the solution for the first scenario. (Note that $k < d$ is not possible by definition of $k$.)}\relax }{figure.caption.2}{}}
+\citation{information_criteria_tar}
+\citation{aiccp}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Order selection}{9}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:selecting_AR_orders}{{3.4}{9}{Order selection}{subsection.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Model selection}{9}{subsection.3.5}\protected@file@percent }
+\newlabel{sec:model_selection}{{3.5}{9}{Model selection}{subsection.3.5}{}}
+\citation{ljungbox}
+\newlabel{eq:aiccp}{{10}{10}{Model selection}{equation.3.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Simulation study 1: Model selection}{10}{section.4}\protected@file@percent }
+\newlabel{sec:simulation_study_1}{{4}{10}{Simulation study 1: Model selection}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Simulation setup}{10}{subsection.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Examples of generated data from the HysTAR model\relax }}{11}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:ts_examples}{{3}{11}{Examples of generated data from the HysTAR model\relax }{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Results}{11}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:model_selection_results}{{4.2}{11}{Results}{subsection.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Conclusion}{12}{subsection.4.3}\protected@file@percent }
+\citation{bar2}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Simulation Study 2: Parameter estimation}{13}{section.5}\protected@file@percent }
+\newlabel{sec:simulation_study_2}{{5}{13}{Simulation Study 2: Parameter estimation}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Performance measures}{13}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Results}{13}{subsection.5.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Proportion correct model selection according to the BIC and AICcp\relax }}{14}{table.caption.4}\protected@file@percent }
+\newlabel{tab:model_selection_results}{{1}{14}{Proportion correct model selection according to the BIC and AICcp\relax }{table.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Empirical bias and variance of $\hat  {r}_0$ (top pane) and $\hat  {r}_1$ (bottom pane)\relax }}{15}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:simulation_study_2_results}{{4}{15}{Empirical bias and variance of $\hat {r}_0$ (top pane) and $\hat {r}_1$ (bottom pane)\relax }{figure.caption.5}{}}
+\citation{borsboom_psychometric_2008}
+\citation{cramer_major_2016}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Empirical example 1: Depression}{16}{section.6}\protected@file@percent }
+\newlabel{sec:empirical_example_1}{{6}{16}{Empirical example 1: Depression}{section.6}{}}
+\citation{cramer_major_2016}
+\citation{R,R_cusp}
+\citation{cramer_major_2016}
+\citation{network_data}
+\citation{kuppens_emotional_2010,koval_getting_2012}
+\citation{cramer_major_2016}
+\citation{tsay}
+\citation{liu}
+\citation{chen}
+\citation{bar2}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \textit  {Autocorrelation function estimates for the residuals of the TAR model and the HysTAR model. The dashed lines represent the 95\% confidence interval around 0.}\relax }}{17}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:resplot_MD}{{5}{17}{\textit {Autocorrelation function estimates for the residuals of the TAR model and the HysTAR model. The dashed lines represent the 95\% confidence interval around 0.}\relax }{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.1}Results}{17}{subsubsection.6.0.1}\protected@file@percent }
+\citation{speedaccuracy}
+\citation{speedaccuracy}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces \textit  {Time series plots of stress and depression, simulated from a network model. The dashed lines represent the estimates threshold values of the HysTAR model. The grey background represents the depressed regime and the white background represents the healthy regime.}\relax }}{18}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:ts_plot_MD}{{6}{18}{\textit {Time series plots of stress and depression, simulated from a network model. The dashed lines represent the estimates threshold values of the HysTAR model. The grey background represents the depressed regime and the white background represents the healthy regime.}\relax }{figure.caption.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Parameter estimates of the HysTAR model and TAR model on data simulated from an empirical depression model, $T = 1000$.\relax }}{18}{table.caption.8}\protected@file@percent }
+\newlabel{tab:results_MD}{{2}{18}{Parameter estimates of the HysTAR model and TAR model on data simulated from an empirical depression model, $T = 1000$.\relax }{table.caption.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Empirical example 2: Speed-accuracy Trade-off}{18}{section.7}\protected@file@percent }
+\newlabel{sec:empirical_example_2}{{7}{18}{Empirical example 2: Speed-accuracy Trade-off}{section.7}{}}
+\citation{speedaccuracy}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Data analysis}{19}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Results}{19}{subsection.7.2}\protected@file@percent }
+\citation{bar1,bar2}
+\citation{R,R_hystar}
+\citation{chow2014regime}
+\citation{chen}
+\citation{tsay}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces \textit  {Time series plot of response time as the outcome variable and payoff for accuracy as the control variable in a speed-accuracy trade-off experiment. The guess regime is in white and the stimulus-controlled regime is in grey.}\relax }}{20}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:ts_plot_SAT}{{7}{20}{\textit {Time series plot of response time as the outcome variable and payoff for accuracy as the control variable in a speed-accuracy trade-off experiment. The guess regime is in white and the stimulus-controlled regime is in grey.}\relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Discussion}{20}{section.8}\protected@file@percent }
+\newlabel{sec:discussion}{{8}{20}{Discussion}{section.8}{}}
+\citation{tar_affect_dyadic1}
+\citation{speedaccuracy}
+\bibstyle{apacite}
+\bibdata{references.bib}
+\@writefile{toc}{\contentsline {paragraph}{Acknowledgements}{21}{paragraph*.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Materials}{21}{paragraph*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Least squares estimation of $\phi $ given $r$ and $d$}{21}{appendix.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Estimation}{21}{subsection.A.1}\protected@file@percent }
+\newlabel{app:estimation}{{A.1}{21}{Estimation}{subsection.A.1}{}}
+\citation{bar2}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Inference}{22}{subsection.A.2}\protected@file@percent }
+\newlabel{app:inference}{{A.2}{22}{Inference}{subsection.A.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Results from SAT experiment}{22}{appendix.B}\protected@file@percent }
+\newlabel{app:results_SAT}{{B}{22}{Results from SAT experiment}{appendix.B}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Point estimates and confidence intervals of the parameters of the HysTAR model for participants and sessions. Additionally, the table presents estimates of information criteria for the TAR and HysTAR model, where a lower value indicates preference of one model over the other.\relax }}{22}{table.caption.12}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Estimated ACFs of the residuals from the TAR and HysTAR model, for all sessions. The dashed lines represent the 95\% confidence interval around 0.\relax }}{23}{figure.caption.13}\protected@file@percent }
