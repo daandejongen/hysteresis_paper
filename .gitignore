@@ -4,9 +4,7 @@
 .Ruserdata
 
 # latex output files
-.aux
-.bbl
-.blg
-.log
-.out
-.synctex.gz
+hysteresis_manuscript.synctex.gz
+hysteresis_manuscript.out
+hysteresis_manuscript.log
+hysteresis_manuscript.aux
