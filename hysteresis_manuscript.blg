@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: hysteresis_manuscript.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: references.bib
+Warning--I'm ignoring cusp_example_2's extra "year" field
+--line 593 of file references.bib
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+Warning--No journal in cusp_example_1
+Warning--No journal in skewness_3
+You've used 49 entries,
+            6951 wiz_defined-function locations,
+            1587 strings with 19606 characters,
+and the built_in function-call counts, 99243 in all, are:
+= -- 12345
+> -- 814
+< -- 4835
++ -- 5219
+- -- 100
+* -- 6413
+:= -- 18104
+add.period$ -- 202
+call.type$ -- 49
+change.case$ -- 836
+chr.to.int$ -- 0
+cite$ -- 100
+duplicate$ -- 2796
+empty$ -- 3762
+format.name$ -- 1383
+if$ -- 18719
+int.to.chr$ -- 0
+int.to.str$ -- 147
+missing$ -- 0
+newline$ -- 1289
+num.names$ -- 396
+pop$ -- 1650
+preamble$ -- 1
+purify$ -- 196
+quote$ -- 0
+skip$ -- 6235
+stack$ -- 0
+substring$ -- 5737
+swap$ -- 1525
+text.length$ -- 116
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 4176
+warning$ -- 2
+while$ -- 489
+width$ -- 0
+write$ -- 1606
+(There were 3 warnings)

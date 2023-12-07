@@ -1,0 +1,1388 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Bolger%
+\ \BBA {} Laurenceau%
+}{%
+Bolger%
+\ \BBA {} Laurenceau%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+bolger2013intensive}
+\APACinsertmetastar {%
+bolger2013intensive}%
+\begin{APACrefauthors}%
+Bolger, N.%
+\BCBT {}\ \BBA {} Laurenceau, J\BHBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2013}.
+\newblock
+\APACrefbtitle {Intensive longitudinal methods: An introduction to diary and
+  experience sampling research} {Intensive longitudinal methods: An
+  introduction to diary and experience sampling research}.
+\newblock
+\APACaddressPublisher{}{Guilford press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Borsboom%
+}{%
+Borsboom%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+borsboom_psychometric_2008}
+\APACinsertmetastar {%
+borsboom_psychometric_2008}%
+\begin{APACrefauthors}%
+Borsboom, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Psychometric perspectives on diagnostic systems}
+  {Psychometric perspectives on diagnostic systems}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Clinical Psychology}{64}{}{1089--1108}.
+\newblock
+\begin{APACrefDOI} \doi{10.1002/jclp.20503} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Box%
+, Jenkins%
+, Reinsel%
+\BCBL {}\ \BBA {} Ljung%
+}{%
+Box%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+box_jenkins}
+\APACinsertmetastar {%
+box_jenkins}%
+\begin{APACrefauthors}%
+Box, G\BPBI E.%
+, Jenkins, G\BPBI M.%
+, Reinsel, G\BPBI C.%
+\BCBL {}\ \BBA {} Ljung, G\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2015}.
+\newblock
+\APACrefbtitle {Time series analysis: Forecasting and control} {Time series
+  analysis: Forecasting and control}.
+\newblock
+\APACaddressPublisher{}{John Wiley \& Sons, Inc.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bringmann%
+\ \protect \BOthers {.}}{%
+Bringmann%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+changing_inertia_2}
+\APACinsertmetastar {%
+changing_inertia_2}%
+\begin{APACrefauthors}%
+Bringmann, L\BPBI F.%
+, Hamaker, E\BPBI L.%
+, Vigo, D\BPBI E.%
+, Aubert, A.%
+, Borsboom, D.%
+\BCBL {}\ \BBA {} Tuerlinckx, F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Changing dynamics: {Time}-varying autoregressive models
+  using generalized additive modeling.} {Changing dynamics: {Time}-varying
+  autoregressive models using generalized additive modeling.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychological Methods}{22}{}{409--425}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/met0000085} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ceja%
+\ \BBA {} Navarro%
+}{%
+Ceja%
+\ \BBA {} Navarro%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+cusp_example_3}
+\APACinsertmetastar {%
+cusp_example_3}%
+\begin{APACrefauthors}%
+Ceja, L.%
+\BCBT {}\ \BBA {} Navarro, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {‘Suddenly I get into the zone’: Examining
+  discontinuities and nonlinear changes in flow experiences at work}
+  {‘suddenly i get into the zone’: Examining discontinuities and nonlinear
+  changes in flow experiences at work}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Human Relations}{65}{}{1101--1147}.
+\newblock
+\begin{APACrefDOI} \doi{10.1177/0018726712447116} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chatfield%
+\ \BBA {} Xing%
+}{%
+Chatfield%
+\ \BBA {} Xing%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+chatfield}
+\APACinsertmetastar {%
+chatfield}%
+\begin{APACrefauthors}%
+Chatfield, C.%
+\BCBT {}\ \BBA {} Xing, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2019}.
+\newblock
+\APACrefbtitle {The analysis of time series: An introduction with R} {The
+  analysis of time series: An introduction with r}.
+\newblock
+\APACaddressPublisher{}{CRC press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chen%
+, Than-Thi%
+\BCBL {}\ \BBA {} So%
+}{%
+Chen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+chen}
+\APACinsertmetastar {%
+chen}%
+\begin{APACrefauthors}%
+Chen, C\BPBI W.%
+, Than-Thi, H.%
+\BCBL {}\ \BBA {} So, M\BPBI K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {On hysteretic vector autoregressive model with
+  applications} {On hysteretic vector autoregressive model with
+  applications}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Statistical Computation and
+  Simulation}{89}{}{191--210}.
+\newblock
+\begin{APACrefDOI} \doi{10.1080/00949655.2018.1540619} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chow%
+, Witkiewitz%
+, Grasman%
+, Hutton%
+\BCBL {}\ \BBA {} Maisto%
+}{%
+Chow%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+chow2014regime}
+\APACinsertmetastar {%
+chow2014regime}%
+\begin{APACrefauthors}%
+Chow, S\BHBI M.%
+, Witkiewitz, K.%
+, Grasman, R.%
+, Hutton, R\BPBI S.%
+\BCBL {}\ \BBA {} Maisto, S\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A regime-switching longitudinal model of alcohol
+  lapse-relapse} {A regime-switching longitudinal model of alcohol
+  lapse-relapse}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Handbook of developmental systems theory and
+  methodology}{}{}{397--422}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Clair%
+}{%
+Clair%
+}{%
+{\protect \APACyear {1998}}%
+}]{%
+cusp_example_1}
+\APACinsertmetastar {%
+cusp_example_1}%
+\begin{APACrefauthors}%
+Clair, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1998}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A cusp catastrophe model for adolescent alcohol use: An
+  empirical test} {A cusp catastrophe model for adolescent alcohol use: An
+  empirical test}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{}{}{}{217--241}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Cobb%
+}{%
+Cobb%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+cobb}
+\APACinsertmetastar {%
+cobb}%
+\begin{APACrefauthors}%
+Cobb, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Estimation theory for the cusp catastrophe model.
+  Revised Edition} {Estimation theory for the cusp catastrophe model. revised
+  edition}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the American Statistical Association
+  Section on Survey Research Methods} {Proceedings of the american statistical
+  association section on survey research methods}\ (\BPGS\ 772--776).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Cramer%
+\ \protect \BOthers {.}}{%
+Cramer%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+cramer_major_2016}
+\APACinsertmetastar {%
+cramer_major_2016}%
+\begin{APACrefauthors}%
+Cramer, A\BPBI O\BPBI J.%
+, van Borkulo, C\BPBI D.%
+, Giltay, E\BPBI J.%
+, van~der Maas, H\BPBI L\BPBI J.%
+, Kendler, K\BPBI S.%
+, Scheffer, M.%
+\BCBL {}\ \BBA {} Borsboom, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Major depression as a complex dynamic system} {Major
+  depression as a complex dynamic system}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{PLOS ONE}{11}{}{e0167490}.
+\newblock
+\begin{APACrefDOI} \doi{10.1371/journal.pone.0167490} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+de Groot%
+}{%
+de Groot%
+}{%
+{\protect \APACyear {2022}}%
+}]{%
+tar_affect_person2}
+\APACinsertmetastar {%
+tar_affect_person2}%
+\begin{APACrefauthors}%
+de Groot, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2022}.
+\unskip\
+\newblock
+\APACrefbtitle {Uncovering change in emotion regulation in clinical practice
+  with the threshold autoregressive model} {Uncovering change in emotion
+  regulation in clinical practice with the threshold autoregressive model}\
+  \APACtypeAddressSchool {Doctoral dissertation}{}{}.
+\unskip\
+\newblock
+\begin{APACrefURL} \url{https://fse.studenttheses.ub.rug.nl/27617/}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+De~Haan-Rietdijk%
+, Gottman%
+, Bergeman%
+\BCBL {}\ \BBA {} Hamaker%
+}{%
+De~Haan-Rietdijk%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+tar_affect_dyadic1}
+\APACinsertmetastar {%
+tar_affect_dyadic1}%
+\begin{APACrefauthors}%
+De~Haan-Rietdijk, S.%
+, Gottman, J\BPBI M.%
+, Bergeman, C\BPBI S.%
+\BCBL {}\ \BBA {} Hamaker, E\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Get over it! A multilevel threshold autoregressive model
+  for state-dependent affect regulation} {Get over it! a multilevel threshold
+  autoregressive model for state-dependent affect regulation}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychometrika}{81}{}{217--241}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s11336-014-9417-x} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+De~Jong%
+}{%
+De~Jong%
+}{%
+{\protect \APACyear {2022}}%
+}]{%
+R_hystar}
+\APACinsertmetastar {%
+R_hystar}%
+\begin{APACrefauthors}%
+De~Jong, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {hystar: Fit the hysteretic TAR model to time series
+  data} {hystar: Fit the hysteretic tar model to time series data}{\BBCQ}\
+  [\bibcomputersoftwaremanual].
+\newblock
+\begin{APACrefURL} \url{https://CRAN.R-project.org/package=hystar}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{R package version 1.2.0}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dutilh%
+, Wagenmakers%
+, Visser%
+\BCBL {}\ \BBA {} van~der Maas%
+}{%
+Dutilh%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2011}}%
+}]{%
+speedaccuracy}
+\APACinsertmetastar {%
+speedaccuracy}%
+\begin{APACrefauthors}%
+Dutilh, G.%
+, Wagenmakers, E\BHBI J.%
+, Visser, I.%
+\BCBL {}\ \BBA {} van~der Maas, H\BPBI L\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A phase transition model for the speed-accuracy
+  trade-off in response time experiments} {A phase transition model for the
+  speed-accuracy trade-off in response time experiments}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognitive Science}{35}{}{211--250}.
+\newblock
+\begin{APACrefDOI} \doi{10.1111/j.1551-6709.2010.01147.x} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Gilmore%
+}{%
+Gilmore%
+}{%
+{\protect \APACyear {1993}}%
+}]{%
+gilmore}
+\APACinsertmetastar {%
+gilmore}%
+\begin{APACrefauthors}%
+Gilmore, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1993}.
+\newblock
+\APACrefbtitle {Catastrophe theory for scientists and engineers} {Catastrophe
+  theory for scientists and engineers}.
+\newblock
+\APACaddressPublisher{}{Courier Corporation}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Grasman%
+, van~der Maas%
+\BCBL {}\ \BBA {} Wagenmakers%
+}{%
+Grasman%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+R_cusp}
+\APACinsertmetastar {%
+R_cusp}%
+\begin{APACrefauthors}%
+Grasman, R\BPBI P\BPBI P\BPBI P.%
+, van~der Maas, H\BPBI L\BPBI J.%
+\BCBL {}\ \BBA {} Wagenmakers, E\BHBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Fitting the cusp catastrophe in R : A cusp package
+  primer} {Fitting the cusp catastrophe in r : A cusp package primer}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Statistical Software}{32}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.18637/jss.v032.i08} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hamaker%
+}{%
+Hamaker%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+information_criteria_tar}
+\APACinsertmetastar {%
+information_criteria_tar}%
+\begin{APACrefauthors}%
+Hamaker, E\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Using information criteria to determine the number of
+  regimes in threshold autoregressive models} {Using information criteria to
+  determine the number of regimes in threshold autoregressive models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Mathematical Psychology}{53}{}{518--529}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.jmp.2009.07.006} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hamaker%
+}{%
+Hamaker%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+hamaker_within}
+\APACinsertmetastar {%
+hamaker_within}%
+\begin{APACrefauthors}%
+Hamaker, E\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Why researchers should think ``within-person'': {A}
+  paradigmatic rationale} {Why researchers should think ``within-person'': {A}
+  paradigmatic rationale}.{\BBCQ}
+\newblock
+\BIn{} M\BPBI R.~Mehl\ \BBA {} T\BPBI S.~Conner\ (\BEDS), \APACrefbtitle
+  {Handbook of research methods for studying daily life} {Handbook of research
+  methods for studying daily life}\ (\BPGS\ 43--61).
+\newblock
+\APACaddressPublisher{}{The Guilford Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hamaker%
+, Grasman%
+\BCBL {}\ \BBA {} Kamphuis%
+}{%
+Hamaker%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+tar_affect_person1}
+\APACinsertmetastar {%
+tar_affect_person1}%
+\begin{APACrefauthors}%
+Hamaker, E\BPBI L.%
+, Grasman, R\BPBI P.%
+\BCBL {}\ \BBA {} Kamphuis, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Regime-switching models to study psychological
+  processes} {Regime-switching models to study psychological processes}.{\BBCQ}
+\newblock
+\BIn{} M.~PCM\ \BBA {} N.~KM\ (\BEDS), \APACrefbtitle {Individual pathways of
+  change: Statistical models for analyzing learning and development}
+  {Individual pathways of change: Statistical models for analyzing learning and
+  development}\ (\BPGS\ 155--168).
+\newblock
+\APACaddressPublisher{}{American Psychological Association}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/12140-009} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hamaker%
+\ \BBA {} Wichers%
+}{%
+Hamaker%
+\ \BBA {} Wichers%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+notimelikethepresent}
+\APACinsertmetastar {%
+notimelikethepresent}%
+\begin{APACrefauthors}%
+Hamaker, E\BPBI L.%
+\BCBT {}\ \BBA {} Wichers, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {No time like the present: Discovering the hidden
+  dynamics in intensive longitudinal data} {No time like the present:
+  Discovering the hidden dynamics in intensive longitudinal data}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Current Directions in Psychological
+  Science}{26}{}{10--15}.
+\newblock
+\begin{APACrefDOI} \doi{10.1177/0963721416666518} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hamaker%
+, Zhang%
+\BCBL {}\ \BBA {} van~der Maas%
+}{%
+Hamaker%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+tar_affect_dyadic2}
+\APACinsertmetastar {%
+tar_affect_dyadic2}%
+\begin{APACrefauthors}%
+Hamaker, E\BPBI L.%
+, Zhang, Z.%
+\BCBL {}\ \BBA {} van~der Maas, H\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Using threshold autoregressive models to study dyadic
+  interactions} {Using threshold autoregressive models to study dyadic
+  interactions}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychometrika}{74}{}{727--745}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s11336-009-9113-4} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hansen%
+}{%
+Hansen%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+tar_in_economics}
+\APACinsertmetastar {%
+tar_in_economics}%
+\begin{APACrefauthors}%
+Hansen, B\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Threshold autoregression in economics} {Threshold
+  autoregression in economics}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Statistics and its Interface}{4}{}{123--127}.
+\newblock
+\begin{APACrefDOI} \doi{10.4310/SII.2011.v4.n2.a4} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hardy%
+}{%
+Hardy%
+}{%
+{\protect \APACyear {1999}}%
+}]{%
+cusp_example_2}
+\APACinsertmetastar {%
+cusp_example_2}%
+\begin{APACrefauthors}%
+Hardy, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1999}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Stress, anxiety and performance} {Stress, anxiety and
+  performance}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Science and Medicine in
+  Sport}{2}{}{227--233}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/S1440-2440(99)80175-3} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hartelman%
+, van~der Maas%
+\BCBL {}\ \BBA {} Molenaar%
+}{%
+Hartelman%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1998}}%
+}]{%
+CT_limitations1}
+\APACinsertmetastar {%
+CT_limitations1}%
+\begin{APACrefauthors}%
+Hartelman, P\BPBI A.%
+, van~der Maas, H\BPBI L.%
+\BCBL {}\ \BBA {} Molenaar, P\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1998}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Detecting and modelling developmental transitions}
+  {Detecting and modelling developmental transitions}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{British Journal of Developmental
+  Psychology}{16}{}{97--122}.
+\newblock
+\begin{APACrefDOI} \doi{10.1111/j.2044-835X.1998.tb00751.x} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Haslbeck%
+, Ryan%
+\BCBL {}\ \BBA {} Dablander%
+}{%
+Haslbeck%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2023}}%
+}]{%
+skewness_oisin}
+\APACinsertmetastar {%
+skewness_oisin}%
+\begin{APACrefauthors}%
+Haslbeck, J.%
+, Ryan, O.%
+\BCBL {}\ \BBA {} Dablander, F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Multimodality and skewness in emotion time series}
+  {Multimodality and skewness in emotion time series}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Emotion}{}{}{Advance online publication}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/emo0001218} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Koval%
+\ \BBA {} Kuppens%
+}{%
+Koval%
+\ \BBA {} Kuppens%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+changing_inertia_1}
+\APACinsertmetastar {%
+changing_inertia_1}%
+\begin{APACrefauthors}%
+Koval, P.%
+\BCBT {}\ \BBA {} Kuppens, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Changing emotion dynamics: {Individual} differences in
+  the effect of anticipatory social stress on emotional inertia.} {Changing
+  emotion dynamics: {Individual} differences in the effect of anticipatory
+  social stress on emotional inertia.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Emotion}{12}{}{256--267}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/a0024756} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Koval%
+, Kuppens%
+, Allen%
+\BCBL {}\ \BBA {} Sheeber%
+}{%
+Koval%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+koval_getting_2012}
+\APACinsertmetastar {%
+koval_getting_2012}%
+\begin{APACrefauthors}%
+Koval, P.%
+, Kuppens, P.%
+, Allen, N\BPBI B.%
+\BCBL {}\ \BBA {} Sheeber, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Getting stuck in depression: {The} roles of rumination
+  and emotional inertia} {Getting stuck in depression: {The} roles of
+  rumination and emotional inertia}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognition and Emotion}{}{}{1412--1427}.
+\newblock
+\begin{APACrefDOI} \doi{10.1080/02699931.2012.667392} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kuppens%
+, Allen%
+\BCBL {}\ \BBA {} Sheeber%
+}{%
+Kuppens%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+kuppens_emotional_2010}
+\APACinsertmetastar {%
+kuppens_emotional_2010}%
+\begin{APACrefauthors}%
+Kuppens, P.%
+, Allen, N\BPBI B.%
+\BCBL {}\ \BBA {} Sheeber, L\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Emotional inertia and psychologicla maladjustment}
+  {Emotional inertia and psychologicla maladjustment}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychological Science}{21}{}{984--991}.
+\newblock
+\begin{APACrefDOI} \doi{10.1177/0956797610372634} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+D.~Li%
+\ \BBA {} Ling%
+}{%
+D.~Li%
+\ \BBA {} Ling%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+li_least_2012}
+\APACinsertmetastar {%
+li_least_2012}%
+\begin{APACrefauthors}%
+Li, D.%
+\BCBT {}\ \BBA {} Ling, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {On the least squares estimation of multiple-regime
+  threshold autoregressive models} {On the least squares estimation of
+  multiple-regime threshold autoregressive models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Econometrics}{167}{}{240--253}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.jeconom.2011.11.006} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+G.~Li%
+, Guan%
+, Li%
+\BCBL {}\ \BBA {} Yu%
+}{%
+G.~Li%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+bar2}
+\APACinsertmetastar {%
+bar2}%
+\begin{APACrefauthors}%
+Li, G.%
+, Guan, B.%
+, Li, W\BPBI K.%
+\BCBL {}\ \BBA {} Yu, P\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Hysteretic autoregressive time series models}
+  {Hysteretic autoregressive time series models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Biometrika}{102}{}{717--723}.
+\newblock
+\begin{APACrefDOI} \doi{10.1093/biomet/asv017} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Liu%
+, Li%
+\BCBL {}\ \BBA {} Zhu%
+}{%
+Liu%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+liu}
+\APACinsertmetastar {%
+liu}%
+\begin{APACrefauthors}%
+Liu, M.%
+, Li, Q.%
+\BCBL {}\ \BBA {} Zhu, F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Self-excited hysteretic negative binomial
+  autoregression} {Self-excited hysteretic negative binomial
+  autoregression}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{AStA Advances in Statistical
+  Analysis}{104}{}{385--415}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s10182-019-00360-6} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ljung%
+\ \BBA {} Box%
+}{%
+Ljung%
+\ \BBA {} Box%
+}{%
+{\protect \APACyear {1978}}%
+}]{%
+ljungbox}
+\APACinsertmetastar {%
+ljungbox}%
+\begin{APACrefauthors}%
+Ljung, G\BPBI M.%
+\BCBT {}\ \BBA {} Box, G\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1978}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {On a measure of lack of fit in time series models} {On a
+  measure of lack of fit in time series models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Biometrika}{65}{}{297--303}.
+\newblock
+\begin{APACrefDOI} \doi{10.2307/2335207} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mayergoyz%
+}{%
+Mayergoyz%
+}{%
+{\protect \APACyear {2003}}%
+}]{%
+hysteresis_mathematical}
+\APACinsertmetastar {%
+hysteresis_mathematical}%
+\begin{APACrefauthors}%
+Mayergoyz, I\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2003}.
+\newblock
+\APACrefbtitle {Mathematical models of hysteresis and their applications}
+  {Mathematical models of hysteresis and their applications}.
+\newblock
+\APACaddressPublisher{}{Academic press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Molenaar%
+}{%
+Molenaar%
+}{%
+{\protect \APACyear {2004}}%
+}]{%
+molenaar_manifesto}
+\APACinsertmetastar {%
+molenaar_manifesto}%
+\begin{APACrefauthors}%
+Molenaar, P\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A manifesto on psychology as idiographic science:
+  Bringing the person back into scientific psychology, this time forever} {A
+  manifesto on psychology as idiographic science: Bringing the person back into
+  scientific psychology, this time forever}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Measurement}{2}{}{201--218}.
+\newblock
+\begin{APACrefDOI} \doi{10.1207/s15366359mea0204_1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ninomiya%
+}{%
+Ninomiya%
+}{%
+{\protect \APACyear {2005}}%
+}]{%
+aiccp}
+\APACinsertmetastar {%
+aiccp}%
+\begin{APACrefauthors}%
+Ninomiya, Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Information criterion for Gaussian change-point model}
+  {Information criterion for gaussian change-point model}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Statistics \& probability letters}{72}{}{237--247}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.spl.2004.10.037} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Peeters%
+, Berkhof%
+, Delespaul%
+, Rottenberg%
+\BCBL {}\ \BBA {} Nicolson%
+}{%
+Peeters%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2006}}%
+}]{%
+skewness_2}
+\APACinsertmetastar {%
+skewness_2}%
+\begin{APACrefauthors}%
+Peeters, F.%
+, Berkhof, J.%
+, Delespaul, P.%
+, Rottenberg, J.%
+\BCBL {}\ \BBA {} Nicolson, N\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Diurnal mood variation in major depressive disorder.}
+  {Diurnal mood variation in major depressive disorder.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Emotion}{6}{3}{383}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Prescott%
+, Aggen%
+\BCBL {}\ \BBA {} Kendler%
+}{%
+Prescott%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2000}}%
+}]{%
+network_data}
+\APACinsertmetastar {%
+network_data}%
+\begin{APACrefauthors}%
+Prescott, C\BPBI A.%
+, Aggen, S\BPBI H.%
+\BCBL {}\ \BBA {} Kendler, K\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Sex-specific genetic influences on the comorbidity of
+  alcoholism and major depression in a population-based sample of US twins}
+  {Sex-specific genetic influences on the comorbidity of alcoholism and major
+  depression in a population-based sample of us twins}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Archives of general psychiatry}{57}{}{803--811}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{R Core Team}%
+}{%
+{R Core Team}%
+}{%
+{\protect \APACyear {2022}}%
+}]{%
+R}
+\APACinsertmetastar {%
+R}%
+\begin{APACrefauthors}%
+{R Core Team}.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {R: A Language and Environment for Statistical Computing}
+  {R: A language and environment for statistical computing}{\BBCQ}\
+  [\bibcomputersoftwaremanual].
+\newblock
+\begin{APACrefURL} \url{https://www.R-project.org/} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Strogatz%
+}{%
+Strogatz%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+strogatz}
+\APACinsertmetastar {%
+strogatz}%
+\begin{APACrefauthors}%
+Strogatz, S\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2018}.
+\newblock
+\APACrefbtitle {Nonlinear dynamics and chaos with student solutions manual:
+  With applications to physics, biology, chemistry, and engineering} {Nonlinear
+  dynamics and chaos with student solutions manual: With applications to
+  physics, biology, chemistry, and engineering}.
+\newblock
+\APACaddressPublisher{}{CRC press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tong%
+\ \BBA {} Lim%
+}{%
+Tong%
+\ \BBA {} Lim%
+}{%
+{\protect \APACyear {1980}}%
+}]{%
+tar}
+\APACinsertmetastar {%
+tar}%
+\begin{APACrefauthors}%
+Tong, H.%
+\BCBT {}\ \BBA {} Lim, K\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1980}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Threshold autoregression, limit cycles and cyclical
+  data} {Threshold autoregression, limit cycles and cyclical data}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of the Royal Statistical Society: Series B
+  (Methodological)}{42}{}{245--268}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+R.~Tsay%
+, Chen%
+\BCBL {}\ \BBA {} Liu%
+}{%
+R.~Tsay%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+R_NTS}
+\APACinsertmetastar {%
+R_NTS}%
+\begin{APACrefauthors}%
+Tsay, R.%
+, Chen, R.%
+\BCBL {}\ \BBA {} Liu, X.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {NTS: Nonlinear Time Series Analysis} {Nts: Nonlinear
+  time series analysis}{\BBCQ}\ [\bibcomputersoftwaremanual].
+\newblock
+\begin{APACrefURL} \url{https://CRAN.R-project.org/package=NTS}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{R package version 1.1.2}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+R\BPBI S.~Tsay%
+}{%
+R\BPBI S.~Tsay%
+}{%
+{\protect \APACyear {1989}}%
+}]{%
+testing_for_threshold_nonlinearity}
+\APACinsertmetastar {%
+testing_for_threshold_nonlinearity}%
+\begin{APACrefauthors}%
+Tsay, R\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1989}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Testing and modeling threshold autoregressive processes}
+  {Testing and modeling threshold autoregressive processes}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of the American statistical
+  association}{84}{405}{231--240}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+R\BPBI S.~Tsay%
+}{%
+R\BPBI S.~Tsay%
+}{%
+{\protect \APACyear {2021}}%
+}]{%
+tsay}
+\APACinsertmetastar {%
+tsay}%
+\begin{APACrefauthors}%
+Tsay, R\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Multivariate hysteretic autoregressive models}
+  {Multivariate hysteretic autoregressive models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Statistica Sinica}{31}{}{2257--2274}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Van~der Maas%
+\ \BBA {} Molenaar%
+}{%
+Van~der Maas%
+\ \BBA {} Molenaar%
+}{%
+{\protect \APACyear {1992}}%
+}]{%
+bimodality_han}
+\APACinsertmetastar {%
+bimodality_han}%
+\begin{APACrefauthors}%
+Van~der Maas, H\BPBI L.%
+\BCBT {}\ \BBA {} Molenaar, P\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1992}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Stagewise cognitive development: an application of
+  catastrophe theory.} {Stagewise cognitive development: an application of
+  catastrophe theory.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychological review}{99}{3}{395}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Von~Klipstein%
+\ \protect \BOthers {.}}{%
+Von~Klipstein%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2022}}%
+}]{%
+skewness_3}
+\APACinsertmetastar {%
+skewness_3}%
+\begin{APACrefauthors}%
+Von~Klipstein, L.%
+, Servaas, M.%
+, Lamers, F.%
+, Schoevers, R.%
+, Wardenaar, K.%
+\BCBL {}\ \BBA {} Riese, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Can Floor Effects Explain Increased Affective Reactivity
+  Among Depressed Individuals Found in Experience Sampling Research?} {Can
+  floor effects explain increased affective reactivity among depressed
+  individuals found in experience sampling research?}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{}{}{}{Advance online publication}.
+\newblock
+\begin{APACrefDOI} \doi{10.31234/osf.io/6vtew} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wagenmakers%
+, Molenaar%
+, Grasman%
+, Hartelman%
+\BCBL {}\ \BBA {} van~der Maas%
+}{%
+Wagenmakers%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2005}}%
+}]{%
+CT_limitations2}
+\APACinsertmetastar {%
+CT_limitations2}%
+\begin{APACrefauthors}%
+Wagenmakers, E\BHBI J.%
+, Molenaar, P\BPBI C\BPBI M.%
+, Grasman, R\BPBI P\BPBI P\BPBI P.%
+, Hartelman, P\BPBI A\BPBI I.%
+\BCBL {}\ \BBA {} van~der Maas, H\BPBI L\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Transformation invariant stochastic catastrophe theory}
+  {Transformation invariant stochastic catastrophe theory}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physica D: Nonlinear Phenomena}{211}{}{263--276}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.physd.2005.08.014} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Walls%
+\ \BBA {} Schafer%
+}{%
+Walls%
+\ \BBA {} Schafer%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+walls2006models}
+\APACinsertmetastar {%
+walls2006models}%
+\begin{APACrefauthors}%
+Walls, T\BPBI A.%
+\BCBT {}\ \BBA {} Schafer, J\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2006}.
+\newblock
+\APACrefbtitle {Models for intensive longitudinal data} {Models for intensive
+  longitudinal data}.
+\newblock
+\APACaddressPublisher{}{Oxford University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Zhu%
+, Yu%
+\BCBL {}\ \BBA {} Li%
+}{%
+Zhu%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+bar1}
+\APACinsertmetastar {%
+bar1}%
+\begin{APACrefauthors}%
+Zhu, K.%
+, Yu, P\BPBI L.%
+\BCBL {}\ \BBA {} Li, W\BPBI K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Testing for the buffered autoregressive processes}
+  {Testing for the buffered autoregressive processes}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Statistica Sinica}{}{}{971--984}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

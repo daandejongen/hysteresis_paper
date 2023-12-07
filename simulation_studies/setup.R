@@ -1,3 +1,6 @@
+# The set_up contains settings like number of iterations, random seed,
+# names of the estimates, etc.
+
 n_iterations <- 500
 set.seed(41114)
 

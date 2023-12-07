@@ -1,3 +1,7 @@
+# The "workers" are functions that do things like fit the model within an
+# iteration, extract model results and store them appropriately, do all iterations
+# within a given condition.
+
 get_estimates <- function(condition_values) {
   generated_data <- generate_zy(condition_values)
   fit_hystar     <- hystar_fit(generated_data, tar = FALSE)

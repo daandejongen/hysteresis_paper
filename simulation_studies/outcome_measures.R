@@ -1,3 +1,5 @@
+# Functions to compute things like the bias, MSE, coverage rate, et cetera.
+
 compute_outcomes <- function(type = c("bias", "variance", "mse")) {
   parameters <- c("phi00", "phi01", "phi10", "phi11", "r0", "r1")
   n_conditions <- nrow(conditions_overview)
