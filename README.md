@@ -11,16 +11,13 @@ Additionally, for producing the manuscript itself, you need the typesetting prog
 
 The top folder consists of the following folders and files:
 
-* The first step is to open `hysteresis_paper.Rproj` in RStudio.
+* `hysteresis_paper.Rproj`, to open the project in RStudio (makes sure that file paths are specified correctly, and $\textsf{R}$-objects are not contaminated with $\textsf{R}$-objects from other projects).
 
-* Then, you need to install the $\textsf{R}$-packages [`hystar`](https://daandejongen.github.io/hystar/),  [`foreign`](https://cran.r-project.org/web/packages/foreign/index.html) and [`xtable`](https://cran.r-project.org/web/packages/xtable/index.html). You can do this with the script `install_dependencies.R`. Here, it is also checked if your versions of these packages are not older than the versions I used in my study, if you already have installed the packages before. Load `session_info.RDS` for the detailed information about the software I used (open it manually in RStudio, or run `readRDS(file = "session_info.RDS")` in RStudio).
+* with the script `install_dependencies.R`, you can install the $\textsf{R}$-packages [`hystar`](https://daandejongen.github.io/hystar/),  [`foreign`](https://cran.r-project.org/web/packages/foreign/index.html) and [`xtable`](https://cran.r-project.org/web/packages/xtable/index.html). Here, it is also checked if your versions of these packages are not older than the versions I used in my study, if you already have installed the packages before. 
 
-* The actual manuscript `hysteresis_manuscript.pdf` is produced by `hysteresis_manuscript.tex` (only file you need to run/compile in the TeX-editor), which imports
-  
-  - the `.tex` files in `tables/`, 
-  
-  - the `.pdf` files in `images/` and 
-  
-  - `references.bib`.
-  
-* The tables and images are produced by the $\textsf{R}$-scripts in the folders `simulation_studies/`, `major_depression/` and `speed_accuracy_trade_off/`. In these folders, you will find all code to reproduce the analyses I did for the current project. These folders have their own README file.
+* Load `session_info.RDS` for the detailed information about the software I used (open it manually in RStudio, or run `readRDS(file = "session_info.RDS")` in RStudio).
+ 
+* `manuscript/` contains all files to (re)produce the manuscript with LaTeX.
+
+* `simulation_studies/`, `major_depression/`, and `speed_accuracy_trade_off/` contain the materials to (re)produce the simulations and analyses of the current study, they have their own README file.
+

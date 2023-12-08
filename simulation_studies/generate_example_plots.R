@@ -1,6 +1,6 @@
 generate_example_plots <- function() {
   par(mfrow = c(3, 1))
-  pdf(file = paste0("simulation_studies/output/plot_", i, ".pdf"), width = 10, height = 6)
+  #pdf(file = "simulation_studies/output/plot.pdf", width = 10, height = 6)
   for (i in 1:3) {
     z <- z_sim(n_t = 100, n_switches = conditions_n_switches[i])
     sim <- hystar_sim(z = z,
