@@ -3,27 +3,23 @@
 # Author: Daan de Jong
 
 rm(list = ls()) # clears R environment
-if (!("foreign" %in% installed.packages())) install.packages("foreign")
 library("hystar")
 source("speed_accuracy_trade_off/fit.R")
 source("speed_accuracy_trade_off/ljung-box-tests.R")
 source("speed_accuracy_trade_off/plot.R")
 
-# Warning message about duplicated levels can be ignored
-data_F <- foreign::read.spss("speed_accuracy_trade_off/data/acc_rt_1.sav",
-                             to.data.frame = TRUE)
-data_I <- foreign::read.spss("speed_accuracy_trade_off/data/acc_rt_2.sav",
-                             to.data.frame = TRUE)
+data <- read.csv("speed_accuracy_trade_off/data_processed/SAT_data.csv")
+head(data)
 
 # Fit models
-fit_F0_hystar <- fit(data_F, session = 0, tar = FALSE)
-fit_F1_hystar <- fit(data_F, session = 1, tar = FALSE)
-fit_I0_hystar <- fit(data_I, session = 0, tar = FALSE)
-fit_I1_hystar <- fit(data_I, session = 1, tar = FALSE)
-fit_F0_tar    <- fit(data_F, session = 0, tar = TRUE)
-fit_F1_tar    <- fit(data_F, session = 1, tar = TRUE)
-fit_I0_tar    <- fit(data_I, session = 0, tar = TRUE)
-fit_I1_tar    <- fit(data_I, session = 1, tar = TRUE)
+fit_F0_hystar <- fit(data, participant = "F", session = 0, tar = FALSE)
+fit_F1_hystar <- fit(data, participant = "F", session = 1, tar = FALSE)
+fit_I0_hystar <- fit(data, participant = "I", session = 0, tar = FALSE)
+fit_I1_hystar <- fit(data, participant = "I", session = 1, tar = FALSE)
+fit_F0_tar    <- fit(data, participant = "F", session = 0, tar = TRUE)
+fit_F1_tar    <- fit(data, participant = "F", session = 1, tar = TRUE)
+fit_I0_tar    <- fit(data, participant = "I", session = 0, tar = TRUE)
+fit_I1_tar    <- fit(data, participant = "I", session = 1, tar = TRUE)
 
 # Run `summary()`, `print()` and/or `confint()` on the model objects
 # to inspect results. For example:

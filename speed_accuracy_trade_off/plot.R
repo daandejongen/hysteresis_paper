@@ -3,7 +3,7 @@ plot_data <- function(model, save_plot = TRUE) {
   participant_name <- substr(model_name, start = 5, stop = 5)
   session_name <- substr(model_name, start = 6, stop = 6)
 
-  if (save_plot) pdf(paste0("speed_accuracy_trade_off/output/plot_",
+  if (save_plot) pdf(paste0("speed_accuracy_trade_off/plots/plot_",
                             participant_name,
                             session_name,
                             ".pdf"),
