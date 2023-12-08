@@ -3,6 +3,8 @@
 # time series simulated from a network model.
 
 library("hystar")
+source("major_depression/simulate_data.R")
+source("major_depression/plot_MD_data.R")
 
 # Thresholds and weights from supplementary material
 # https://figshare.com/projects/Major_depression_as_
@@ -22,3 +24,4 @@ fit_tar    <- hystar_fit(data, d = 0:1, tar = TRUE)
 Box.test(fit_hystar$residuals_st, type = "L", lag = 1)
 Box.test(fit_tar$residuals_st, type = "L", lag = 1)
 
+plot_MD_data() # only saves the plot, does not show it directly.
