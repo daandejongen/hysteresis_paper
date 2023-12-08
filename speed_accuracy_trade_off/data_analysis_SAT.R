@@ -6,7 +6,7 @@ rm(list = ls()) # clears R environment
 library("hystar")
 source("speed_accuracy_trade_off/fit.R")
 source("speed_accuracy_trade_off/ljung-box-tests.R")
-source("speed_accuracy_trade_off/plot.R")
+source("speed_accuracy_trade_off/plot_SAT.R")
 
 data <- read.csv("speed_accuracy_trade_off/data_processed/SAT_data.csv")
 head(data)
@@ -38,9 +38,9 @@ hystar_is_preferred(fit_I0_hystar, fit_I0_tar)
 hystar_is_preferred(fit_I1_hystar, fit_I1_tar)
 
 # Make plots
-plot_data(model = fit_F0_hystar, save = TRUE)
-plot_data(model = fit_F1_hystar, save = TRUE)
-plot_data(model = fit_I0_hystar, save = TRUE)
-plot_data(model = fit_I1_hystar, save = TRUE)
+plot_SAT_data(model = fit_F0_hystar, save = TRUE)
+plot_SAT_data(model = fit_F1_hystar, save = TRUE)
+plot_SAT_data(model = fit_I0_hystar, save = TRUE)
+plot_SAT_data(model = fit_I1_hystar, save = TRUE)
 
 

@@ -1,9 +1,9 @@
 simulate_depression_time_series <- function(network_thresholds,
                                             network_weights,
-                                            number_of_time_points = 1000,
+                                            number_of_time_points = 1000
                                             ) {
   network_connection_strength <- 1.1
-  network_weights <- network_weights_raw * network_connection_strength
+  network_weights <- network_weights * network_connection_strength
 
   activated_nodes_matrix <- matrix(0, nrow = 14, ncol = number_of_time_points)
   stress_time_series <- z_sim(n_t = number_of_time_points,

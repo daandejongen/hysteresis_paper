@@ -1,4 +1,4 @@
-plot_data <- function(model, save_plot = TRUE) {
+plot_SAT_data <- function(model, save_plot = TRUE) {
   model_name <- deparse(substitute(model))
   participant_name <- substr(model_name, start = 5, stop = 5)
   session_name <- substr(model_name, start = 6, stop = 6)
