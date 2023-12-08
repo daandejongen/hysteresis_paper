@@ -1,8 +1,8 @@
 create_table_small <- function(rows_var_1, rows_var_2,
-                         cols_var_1,
-                         parameters,
-                         outcomes, r1,
-                         round_by = 2) {
+                               cols_var_1,
+                               parameters,
+                               outcomes, r1,
+                               round_by = 2) {
   select_rows <- conditions_overview[, "r1"] == r1
   outcomes <- outcomes[select_rows, ]
 

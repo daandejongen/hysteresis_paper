@@ -7,7 +7,7 @@ library("hystar") # to generate data and fit the (Hys)TAR model.
 library("xtable") # to export R-objects to LaTeX files.
 source("simulation_studies/setup.R")
 source("simulation_studies/generate_example_plots.R")
-source("simulation_studies/inspect_r_search.R")
+source("simulation_studies/compute_unique_z")
 source("simulation_studies/workers.R")
 source("simulation_studies/outcome_measures.R")
 source("simulation_studies/create_table.R")
