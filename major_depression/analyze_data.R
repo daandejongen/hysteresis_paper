@@ -2,9 +2,6 @@
 # 'Detecting hysteresis with the HysTAR model' about major depression
 # time series simulated from a network model.
 
-if (!("hystar" %in% installed.packages()) || packageVersion("hystar") != "1.2.0") {
-  devtools::install_github("daandejongen/hystar")
-}
 library("hystar")
 
 # Thresholds and weights from supplementary material

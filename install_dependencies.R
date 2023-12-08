@@ -1,7 +1,5 @@
 # Prerequisites for hystar paper R scripts.
 
-rm(list = ls()) # clears the environment.
-
 # The `hystar` package, to simulate from and estimate the hystar model.
 if (!("hystar" %in% installed.packages()) ||
     packageVersion("hystar") < package_version("1.1.0")) {
@@ -19,3 +17,5 @@ if (!("xtable" %in% installed.packages()) ||
     packageVersion("xtable") < package_version("1.8.4")) {
   install.packages("xtable")
 }
+
+

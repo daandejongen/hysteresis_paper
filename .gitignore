@@ -8,3 +8,5 @@
 *.out
 *.log
 *.aux
+*.bbl
+*.blg
