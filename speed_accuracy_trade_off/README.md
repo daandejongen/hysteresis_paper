@@ -6,4 +6,4 @@ The main script is `data_analysis_SAT.R`. It `source`s functions from these scri
 
 * `plot_SAT.R`, to save plots of the data to `manuscript/images/`
 
-The original data are in SPSS format (`.sav`), in the folder `data_raw/`. The script `process_data.R` takes these data as an input and makes it ready for analysis, and stores the processed data in `data_processed/`
+The original data are in SPSS format (`.sav`), in the folder `data_raw/`. The script `process_data.R` takes these data as an input and makes it ready for analysis, and stores the processed data in `data_processed/` in a `.csv` format (comma separated value). Note that data from the two participants is separate in the `data_raw/` and combined into one data set in `data_processed/`.

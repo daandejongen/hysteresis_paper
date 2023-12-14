@@ -50,7 +50,8 @@ conditions[, , 2:n_iterations] <- rep(conditions[, , "iter-1"], times = n_iterat
 conditions_overview <- cbind(conditions[, , 1, drop = TRUE],
                              phi_label = conditions_indices[, "phi"],
                              true_model = ifelse(conditions_indices[, "thresholds"] == 1,
-                                                 yes = 0, no = 1))
+                                                 yes = 0, no = 1),
+                             n_z_values = compute_unique_z()[, "n_unique_z_values"])
 # true model is 0 if tar, 1 if hystar
 
 phi_labels <- c("equal_means_unequal_ar" = 1,

@@ -5,10 +5,10 @@ compute_unique_z <- function() {
       rep(NA, times = length(conditions_n_t) * length(conditions_n_switches))),
     ncol = 3, byrow = FALSE
   )
-  colnames(output_matrix) <- c("n_t", "n_switches", "r_search_size")
+  colnames(output_matrix) <- c("n_t", "n_switches", "n_unique_z_values")
 
   for (i in 1:nrow(output_matrix)) {
-    output_matrix[i, "r_search_size"] <- get_r_search(
+    output_matrix[i, "n_unique_z_values"] <- get_r_search(
       n_t = output_matrix[i, "n_t"],
       n_switches = output_matrix[i, "n_switches"]
     )

@@ -1,5 +1,3 @@
-# Simulation studies
-
 The current study consists of two simulation studies, one on model selection and one on parameter estimation. Both simulation studies are contained in the main script `simulation_studies.R`. In this script, all other helper scripts are `source`d:
 
 * `compute_unique_z.R` computes the number of unique values of the control variable (80% inner range) given `n_t` and `n_switches`.

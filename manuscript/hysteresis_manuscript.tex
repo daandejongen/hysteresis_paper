@@ -167,7 +167,10 @@ R_t = \begin{cases}
 \end{cases}
 \end{equation}
 
-where $z$ denotes the control variable, $d$ is a positive integer allowing for a delayed effect of $z$ and $r$ is the threshold parameter. The left panel of Figure \ref{fig:simple_vs_hysteretic_2} illustrates how the regime is related to the control variable.
+where $z$ denotes the control variable, $d$ is zero or a positive integer allowing for a delayed effect of $z$ and $r$ is the threshold parameter.
+Note that the delay parameter (also called threshold lag) is associated with the problem of identifying the control variable $z$, since the value of $d$ changes the control variable.
+Note that the control variable can also be $y$ itself, in which case the model is referred to as a self-exiting TAR (SETAR) model.
+The left panel of Figure \ref{fig:simple_vs_hysteretic_2} illustrates how the regime is related to the control variable.
 
 \begin{figure}
 \centering
@@ -179,10 +182,14 @@ For simple switches between regime 0 and 1, there is one threshold, $r$. For hys
 \end{figure}
 
 The switches between regime 0 and 1 have the same threshold, regardless whether the switch is from regime 0 to 1 or from 1 to 0. 
-This may not always be realistic: Sometimes, a switch from 0 to 1 cannot be reversed directly, because the control variable has to move to a different threshold  for a switch from 1 to 0.
-For example, increasing external stress experienced by a person might push this person into a ``panic'' regime at a high stress level.
-When the stress decreases again, it is plausible that it has to decrease to a much lower stress level to switch the regime back to ``relaxed''.
+This may not always be realistic: Sometimes, a switch from 0 to 1 cannot be reversed directly, because the control variable has to move to a different threshold for a switch from 1 to 0.
+For example, a switch to a regime characterized by high levels of alcohol consumption (a relapse) may be triggered by increasing levels of negative affect.
+However, the restoration of negative affect will not necessarily bring about a switch back to a low drinking regime again, but may only be possible after decreasing negative affect to an even lower value \citep{alcohol_example}.
+Or as another example, consider the amplifying feedback loop between perceived threat and arousal producing panic attacks in individuals with panic disorder \citep{panic_disorder}.
+When perceived threat is elevated by some external event, an individual might experience a panic attack, and the feedback loops of the system will retain this state.
+To end the panic attack, perceived threat may have to decrease to a lower level than the level that triggered the attack in the first place.
 This phenomenon is called hysteresis.
+Unfortunately, the TAR model cannot capture this, because it has only one threshold parameter.
 To transfer the benefits of the TAR model into a model that can also account for hysteresis, \citet{bar2} proposed the hysteretic TAR model.
 
 \subsection{HysTAR model}
@@ -202,7 +209,10 @@ Note that the HysTAR model is equivalent to the TAR model if $r_0 = r_1$; hence,
 
 \section{Model estimation and inference}
 \label{sec:LS_estimation}
-We take it as a starting point that we already have established that there is threshold non-linearity in the observed data, for example by following the procedure proposed by \citet{testing_for_threshold_nonlinearity}, and now want to determine whether there is hysteresis in the mechanics underlying the regime switches.
+We take it as a starting point that we already have established that there is threshold non-linearity in the observed data, for example by following the procedure proposed by \citet{testing_for_threshold_nonlinearity} as implemented in the \textsf{R}-package \texttt{NTS} \citep{R_NTS}. 
+Now, we want to determine whether there is hysteresis in the mechanics underlying the regime switches.
+Additionally, we assume that the control variable $z$ is known. 
+Although this involves knowing the value of the delay parameter $d$, we will discuss estimation of $d$ for the sake of completeness.
 Since the TAR model and HysTAR model only differ in the hysteresis effect, we can compare the model fit of the TAR model to the fit of the HysTAR model to detect hysteresis. This is described in Section \ref{sec:model_selection} and demonstrated in Section \ref{sec:simulation_study_1}.
 But first, we provide some tools for parameter estimation and inference.
 
@@ -319,7 +329,7 @@ So, we need an alternative approach to assess whether hysteresis is present in t
 In the current paper, we propose to estimate information criteria for both models, and select the model with smaller values.
 Note that the information criteria presented in Section \ref{sec:selecting_AR_orders} do not penalize the threshold parameter(s), and that the HysTAR model has one threshold parameter more than the TAR model.
 Ignoring this difference may lead to overfitting of the HysTAR model.
-Therefore, we adopt an AIC-type information criterion developed for change point models \citep[AICcp][]{aiccp}, where the penalty of a threshold parameter is 6, that is,
+Therefore, we adopt an AIC-type information criterion that was derived for change point models \citep[AICcp][]{aiccp}. The TAR and HysTAR model are closely related to change point models, since change point models are TAR models where $z = (0, 1, \dots, T-1)$. In the AICcp, the penalty of a threshold parameter is 6, that is,
 
 \begin{equation}
 \label{eq:aiccp}
@@ -345,7 +355,7 @@ These questions are addressed in simulation study 1.
 In simulation study 1, we considered the following conditions: 50, 100, 200 and 400 time points, 2, 5, and 10 regime switches (denoted by $N_{\mathrm{rs}}$), (un)equal means and (un)equal autoregression between the regimes, and hysteresis zones $(0, 0]$, $(-0.25, 0.25]$ and $(-0.5, 0.5]$. For each condition, we generated 500 replications of time series of the control variable $z$ and the outcome variable $y$ from the HysTAR model.
 
 This results in a total of $4 \times 3 \times 3 \times 3 = 108$ conditions.
-To obtain the differences in regimes in means and autoregression, we use $\phi = (\phi_{00}, \phi_{01}, \phi_{10}, \phi_{11}) = (0, 0.6, 0, 0.2)$, $(0, 0.6, 3, 0.2)$ and $(0, 0.4, 3, 0.4)$. Note that the means of regime $j$ is given by $\phi_{j0}/(1 - \phi_{0j})$.
+To obtain the differences in regimes in means and autoregression, we use $\phi = (\phi_{00}, \phi_{01}, \phi_{10}, \phi_{11}) = (0, 0.6, 0, 0.2)$, $(0, 0.6, 3, 0.2)$ and $(0, 0.4, 3, 0.4)$. Note that the means of regime $j$ is given by $\phi_{j0}/(1 - \phi_{0j})$. Although threshold non-linearity with equal means seems improbable, it is possible, and we considered this situation as an edge case.
 In all conditions, we set the delay parameter to $d = 0$ and use equal residual variances in the regimes, $\sigma_0^2 = \sigma_1^2 = 1$. 
 Furthermore, to control the number of regime switches, the time series of the control variable is a sine wave, oscillating between $-1$ and $1$ the desired number of times.
 Since hysteresis zones are centered around zero in the current setup, this results in an equal amount of observations in both regimes for 2 and 10 switches, and slightly more observations in regime 0 when there are 5 regime switches.
@@ -378,7 +388,7 @@ Of course, this is not needed in practice, where $z$ will behave less predictabl
 \label{sec:model_selection_results}
 The code to reproduce this simulation study can be found in the online supplementary materials.
 \footnote{\url{https://github.com/daandejongen/hysteresis_paper}}
-In Table \ref{tab:model_selection_results}, we present the proportion of correctly selected models according to the BIC and AICcp within each condition. Results of the AIC and AICc are omitted here, because their values are very similar to the BIC. In general, we see that information criteria can detect hysteresis if the regimes have different means and $T$ is sufficiently large. 
+In Table \ref{tab:model_selection_results}, we present the proportion of correctly selected models according to the BIC and AICcp within each condition. Results of the AIC and AICc are omitted here, because their values are very similar to the BIC. In general, we see that information criteria can detect hysteresis if the regimes have different means and $T$ is sufficiently large.
 The Ljung-Box test was not able to detect the HysTAR model very well. However, the test has a very high \textit{precision} (also: positive predictive value), for many conditions 100\%. So when there is hysteresis, comparing the Ljung-Box results does not indicate hysteresis very often. But when the Ljung-Box comparison is positive, hysteresis is nearly always present (results can be found in the supplementary materials).
 
 When we compare the BIC to the AICcp, we see that the AICcp performs better when the data are generated from a TAR model, and the BIC performs better when the data are generated from HysTAR model. This is unsurprising at first glance, since the AICcp penalizes the HysTAR model 6 points more than the TAR model. Interestingly, it does not seem to matter much how large the hysteresis zone is, when the HysTAR is the true model.
@@ -396,7 +406,9 @@ In the case with $r = (-0.25, 0.25]$, $T = 50$ and $N_{\mathrm{rs}} = 10$, the o
 Therefore, it is important to observe enough $z$-values around the true threshold.
 
 \subsection{Conclusion}
-To detect hysteresis in a regime switching process, comparing information criteria can be a viable method, that compensate for the unavailability of direct statistical hypothesis tests. However, this only holds when the regimes differ in mean, in which case the AICcp performs best. For regimes with equal means, the best performing information criterion depends on whether there is hysteresis or not in the data generating mechanism, which is the research question in the first place. The Ljung-Box test seems be too conservative to detect the correlations in wrongly specified models.
+To detect hysteresis in a regime switching process, comparing information criteria can be a viable method, that compensate for the unavailability of direct statistical hypothesis tests. 
+The AICcp is the preferred model selection criterion, because it outperforms the other ICs when the TAR model is the true model, and performs similar to the other ICs when the HysTAR model is the true model.
+Comparing Ljung-Box test results between the models has a high type-II error (not selecting the HysTAR when the HysTAR model is true), but a high precision (when the HysTAR is selected, it is often the true model).
 
 \input{tables/model_selection_table.tex}
 
@@ -432,19 +444,15 @@ All results not presented here can be found in the online supplementary material
 
 In general, the threshold estimators seem to be consistent, because the variances converge to zero when $T$ increases, which is in line with the analytical results of \cite{bar2}.
 However, we also need to consider the bias, which is not always zero. 
-For equal means and $r = (-0.25, 0.25]$, we see that both estimators are negatively biased. 
-For equal means and $r = (-0.5, 0.5]$, $\hat{r}_0$ has a positive bias and $\hat{r}_1$ has a negative bias, implying that the size of the hysteresis zone is estimated conservatively (too small).
-However, with such large variances (for equal means), differences in bias may be less important.
-
-When the regimes have equal means, we see different patterns for the bias.
-A ``mirroring'' pattern around zero can be seen for $r = (-0.25, 0.25]$ or $r = (-0.5, 0.5]$. Here, the estimates are conservative, that is, the hysteresis zone is often underestimated.
-However, for $T\ge 200$, the biases become almost negligible.
+When the regimes have unequal means, we see a ``mirroring'' pattern around zero. 
+The estimates of $r$ are conservative, that is, the hysteresis zone is often underestimated.
+For $T\ge 200$, the biases become almost negligible.
 Also interesting is the fact that an equal or unequal autoregressive parameter does not seem to impact the amount of bias.
 
-The variance of the estimators show that the model has difficulty recognizing the threshold when the regimes have equal means, which was also clear from the model selection results in Section \ref{sec:model_selection_results}.
-So, regardless of whether the correct type of model is selected or not in this case, the large variances of the threshold estimators make the results from both models hard to interpret.
-Also in line with the previous section is the dip in variance for $T = 50$ and $N_{rs}= 10$, resulting directly from the small number of possible estimates in this case.
-When the regimes have equal means, the variances of the estimators are very low, which is, of course, only desirable when the bias is also low.
+A different pattern can be observed when the means of the regimes are equal. When $r = (-0.25, 0.25]$, we see that both estimators are negatively biased.
+For equal means and $r = (-0.5, 0.5]$, $\hat{r}_0$ has a positive bias and $\hat{r}_1$ has a negative bias, implying that the size of the hysteresis zone is estimated conservatively (too small).
+However, the variance of the estimators show that the model has difficulty recognizing the threshold(s) when the regimes have equal means, which was also clear from the model selection results in Section \ref{sec:model_selection_results}.
+With such large variances, differences in bias may be less informative and individual parameter estimates are harder to interpret, regardless of whether the correct type of model is selected or not.
 
 We note two more observations about estimation of the thresholds. 
 First, when the autoregression in regime 0 is larger than in regime 1, a regime switch from 1 to 0 (caused by threshold $r_0$) will be ``slower'' than a switch from 0 to 1. That is, it takes longer to arrive at the mean of regime 0, because of the larger autoregression. 
@@ -482,21 +490,11 @@ Figure \ref{fig:ts_plot_MD} shows the simulated time series of stress and depres
 In Table \ref{tab:results_MD}, the HysTAR and TAR model estimates are shown.
 According to the AIC, AICc and BIC, the HysTAR model is preferable.
 The Ljung-Box results were indecisive, in the sense that these indicated that both models fit well.
-The autocorrelations of the residuals are presented in Figure \ref{fig:resplot_MD} and indicate a preference for the HysTAR model, since the TAR model has a significant autocorrelation at lag 1.
 The difference between the threshold estimates indicates a substantial hysteresis effect, $\hat{r}_1 - \hat{r}_0 = 0.55 - (-0.33) = 0.88$.
-This shows that the hysTAR model is able to capture the core qualitative phenomenon of hysteretic regime switching 
-even when the generative model is quite different in form to an auto-regressive type model.
-Additionally, the $\phi$ parameters show a clear distinction between the regimes. The mean depression score is 0.85 regime 0 and 9.09 in regime 1,
+This shows that the hysTAR model is able to capture the core qualitative phenomenon of hysteretic regime switching, even when the generative model is quite different in form to an auto-regressive type model.
+Additionally, the $\phi$-parameters show a clear distinction between the regimes. The mean depression score is 0.85 regime 0 and 9.09 in regime 1,
 such that we can interpret regime 0 as the healthy regime and regime 1 as the depression regime. We also see that the depression regime has a stronger autoregression, which is supported by empirical evidence \citep{kuppens_emotional_2010, koval_getting_2012}.
 Notably, these dynamic differences as captured by the autoregressive parameters were not found in the original study by \citet{cramer_major_2016}, because the cusp catastrophe model does not allow for dynamic differences between regimes. 
-
-\begin{figure} 
-\begin{center}
-\includegraphics[scale=.6]{acf_plot}
-\caption{\textit{Autocorrelation function estimates for the residuals of the TAR model and the HysTAR model. The dashed lines represent the 95\% confidence interval around 0.}}
-\label{fig:resplot_MD}
-\end{center}
-\end{figure}
 
 \begin{figure} 
 \begin{center}
@@ -602,24 +600,25 @@ Note that the autoregressive effect of response times from one moment to the nex
 We presented the hysteretic threshold autoregressive (HysTAR) model \citep{bar1, bar2} to study hysteresis in univariate psychological processes characterized by two regimes.
 This model can be estimated with the accompanying \textsf{R}-package \texttt{hystar} \citep{R, R_hystar}.
 To the authors' knowledge, this is the first study to apply the HysTAR model to psychological time series.
-With simulations, it is demonstrated that information criteria can distinguish the HysTAR model from a TAR model when the regimes differ in their means. Additionally, the Ljung-Box test can be conducted on the residuals of both models, and show a high positive predictive value when the regimes differ in their means.
+With simulations, it is demonstrated that information criteria can distinguish the HysTAR model from a TAR model. 
+Additionally, the Ljung-Box test can be conducted on the residuals of both models, and show a high positive predictive value.
 Dynamic differences were found between simulated depression network regimes and between guessing and empirical stimulus-controlled regimes of response times, captured by the autoregressive parameters of the HysTAR model. These differences are not modeled in existing methods to study hysteresis, like the cusp catastrophe model or the hidden Markov model (HMM).
 Additionally, the HysTAR model is well suited for time series data, whereas the cusp model is not applicable to time series data in its current implementations \citep{R_cusp, chow2014regime}.
 
-While the HysTAR model is promising for psychological applications, the model as presented here also has a number of limitations which are relevant for empirical psychological applications. 
+While the HysTAR model is promising for psychological applications, the model as presented here also has a number of limitations which are relevant for empirical psychological applications.
 First, it does not account for measurement error, in contrast to the mixture structural equation model with regime switching (MSEM-RS) approximation to the cusp catastrophe model \citep{chow2014regime}.
+The MSEM-RS model has the additional benefit of being nested in the SEM framework, which has a longstanding tradition and is implemented in many software programs.
 Second, the regimes only define the process of one outcome variable, whereas multiple outcomes are easily incorporated in the MSEM-RS, cusp model and HMM.
-
 Therefore, it should be noted that various extensions of this model exist. 
-For example, the Hysteretic VAR model proposed by \citet{chen} allows for multiple outcome variables. 
+For example, the Hysteretic VAR model proposed by \citet{chen} allows for multiple outcome variables.
 When there are multiple control variables, an alternative to the HysTAR model is the multivariate Hysteretic AR (MHAR) model proposed by \citet{tsay}. 
-In the MHAR model, multiple control variables all have their own threshold and the regime of $y_t$ only switches when all control variables have crossed their threshold. 
+In the MHAR model, multiple control variables all have their own threshold and the regime of $y_t$ only switches when all control variables have crossed their threshold.
 
 Other extensions to the HysTAR model could be developed in the future.
 First, it would be interesting to incorporate a second control variable in the HysTAR model, analogous to the splitting variable of the cusp catastrophe model that controls whether hysteresis present.
 Such a variable could be straightforwardly implemented by adding an additional ``layer'' to the regime switching rule.
 Second, a multilevel extension can be developed to investigate individual differences; such an extension already exists for the TAR model \citep{tar_affect_dyadic1}.
-Third, furture research could explore the use of a Markov switching AR (MSAR) model in the study of hysteresis, which is similar to the HMM used by \citet{speedaccuracy}, but extends this through including an AR process for the outcome variable.
+Third, it should be noted that the hysteretic HMM could be extended to include autoregression as well. Then, the HMM and the HysTAR model would only differ in their switching mechanism, which is probabilistic in the HMM, and deterministic in the HysTAR model. Depending on the theory under examination, one or the other may be preferred. Whether one or the other is preferable from a statistical point of view (e.g., properties of estimators, complexity of the estimation algorithm) should be investigated in future research.
 
 Finally, we like to stress that, in our view, the HysTAR model should be primarily used to detect hysteresis.
 As we saw in simulation 3, one advantage of the model is that it can detect hystersis in different generative models. However, although we detected this phenomenon, the model did not give a description of the mechanism through which hysteretic regime switching took place. 
@@ -752,11 +751,6 @@ AICcp 		& -1839 	& -1841 		& -1526 	& -1540 	 	& -913	& -909		& -1179	& -1182  \
 \caption{Point estimates and confidence intervals of the parameters of the HysTAR model for participants and sessions. Additionally, the table presents estimates of information criteria for the TAR and HysTAR model, where a lower value indicates preference of one model over the other.}
 \end{center}
 \end{table}
-
-\begin{figure}
-\includegraphics[scale=.5]{resplots_SAT}
-\caption{Estimated ACFs of the residuals from the TAR and HysTAR model, for all sessions. The dashed lines represent the 95\% confidence interval around 0.}
-\end{figure}
 
 %\end{multicols}
 
