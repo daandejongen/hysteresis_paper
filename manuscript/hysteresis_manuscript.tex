@@ -6,42 +6,28 @@
 \author{Daan de Jong, Ois\'{i}n Ryan, Han L.J. van der Maas, Ellen L. Hamaker}
 
 %Layout
-\usepackage{setspace}%\onehalfspacing
-\usepackage{titlesec}
-%\titleformat{\section}[wrap]{\normalfont\bfseries}{\thesection.}{0.5em}{}
-\usepackage{fancyhdr}
-%\fancyhead[L]{Title}
-\fancyfoot[C]{\thepage}
+\usepackage[a4paper, total={5.75in, 8in}]{geometry}
 \usepackage{multicol}
 \usepackage{multirow}
-\setlength{\columnsep}{1cm}
 \usepackage[dvipsnames, table]{xcolor}
 \usepackage{setspace, caption}
 \usepackage{tabularx}
 \DeclareCaptionLabelSeparator*{spaced}{\\[2ex]}
 \captionsetup[table, figure]{textfont=it,format=plain,justification=justified,
   singlelinecheck=false,labelsep=spaced,skip=0pt}
-%\captionsetup[figure]{labelsep=period,labelfont=it,justification=justified,
-% singlelinecheck=false,font=doublespacing}
 
 %Graphics
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 \DeclareGraphicsExtensions{.pdf,.png}
-\usepackage{tikz}
-\usetikzlibrary{calc}
-\usetikzlibrary{positioning}
-\usepackage{pgflibraryarrows} 
-\usepackage{pgflibrarysnakes}
 
 %Links
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks=true,
-    citecolor=BlueGreen,
-    linkcolor=BlueGreen,
-    filecolor=BlueGreen,      
-    urlcolor=BlueGreen,
+    citebordercolor = NavyBlue,
+    linkbordercolor = Red,
+    filebordercolor = NavyBlue,      
+    urlbordercolor = Grey
 }
 
 %References
@@ -70,11 +56,7 @@
 
 %=======================================================================
 \begin{document}
-%\begin{multicols}{2}
-
-%\input{front}
 \maketitle
-
 
 Abstract:
 \textit{
@@ -85,7 +67,7 @@ We created a user-friendly package in \textsf{R} to simulate data the HysTAR mod
 Estimation and model selection performance is investigated in simulation studies. 
 Additionally, we further demonstrate the use of the HysTAR model with a time series of depression scores generated from a network of depression symptoms and with an empirical example on hysteresis in the speed-accuracy trade-off.
 }
-
+\newline
 Keywords: \textit{hysteresis, regime switching, non-lineairity, bimodality, bistability, dynamical systems, threshold autoregression, intensive longitudinal data, time series analysis}
 
 \section{Introduction}
@@ -93,7 +75,7 @@ Individuals are complex dynamical systems, whose emotions, cognitions and behavi
 To study the dynamics of their psychological processes, reseachers often measure these individuals at relatively many occasions that are typically closely spaced in time \citep{bolger2013intensive, walls2006models}.
 The data resulting from these measurements are called \textit{intensive longitudinal data} (ILD) or \textit{time series data}, roughly defined to consist of at least 20 measurement occasions.
 Technological advances have caused a enourmous growth in the collection of ILD with the use of ecogical momentary assessments, experience sampling and daily diaries \citep{notimelikethepresent}, resulting in a body of data containing a rich source of information about individual processes.
-However, this source of information remains largely untapped when using conventional statistical models like the autoregressive model of order 1 \citep[AR(1)][]{box_jenkins, chatfield}. These models are often too restrictive to capture the inherently complex dynamics underpinning psychological phenomena, since they imply a symmetric distribution with a constant mean, variance and temporal associations between measurements \citep{formal_theory_1, changing_inertia_2}.
+However, this source of information remains largely untapped when using conventional statistical models like the autoregressive model of order 1 \citep[AR(1),][]{box_jenkins, chatfield}. These models are often too restrictive to capture the inherently complex dynamics underpinning psychological phenomena, since they imply a symmetric distribution with a constant mean, variance and temporal associations between measurements \citep{formal_theory_1, changing_inertia_2}.
 However, it is evident that many psychological time series data exhibit nonstandard features, such as skewness \citep{skewness_oisin, skewness_2, skewness_3}, time-varying temporal associations \citep{changing_inertia_1, changing_inertia_2} and bimodality \citep{skewness_oisin, bimodality_han}.
 The inadequacy of AR models in capturing these features has underscored the necessity for alternative modeling approaches.
 
@@ -130,10 +112,10 @@ In Section \ref{sec:LS_estimation}, we present the conditional least squares met
 In Section \ref{sec:simulation_study_1}, we conduct a simulation study to investigate whether hysteresis can be detected with model selection tools.
 In Section \ref{sec:simulation_study_2}, we present another simulation study, focussed on estimation of the threshold parameters.
 In Section \ref{sec:simulation_study_3}, we generate time series data from an empirical network of depression symptoms. Here, the research question is whether the HysTAR model can detect the hysteresis effect in the regime switches of this network.
-Another empricial example is given in Section \ref{sec:empirical_illustration}, where the use of the HysTAR model is demonstrated in an analysis of the speed-accuracy trade-off phenomenon.
+An empricial example is given in Section \ref{sec:empirical_example}, where the use of the HysTAR model is demonstrated in an analysis of the speed-accuracy trade-off phenomenon.
 We conclude with a discussion section where we highlight current and future extensions to the HysTAR model.
 
-\section{The hysteretic threshold autoregressive (HysTAR) model} \label{sec:hystar}
+\section{Models} \label{sec:hystar}
 In this section, we will first introduce the standard threshold autoregressive (TAR) model.
 Subsequently, we will explain how the TAR model can be expanded to the hysteretic TAR model to account for the hysteresis effect.
 
@@ -169,16 +151,16 @@ R_t = \begin{cases}
 
 where $z$ denotes the control variable, $d$ is zero or a positive integer allowing for a delayed effect of $z$ and $r$ is the threshold parameter.
 Note that the delay parameter (also called threshold lag) is associated with the problem of identifying the control variable $z$, since the value of $d$ changes the control variable.
-Note that the control variable can also be $y$ itself, in which case the model is referred to as a self-exiting TAR (SETAR) model.
-The left panel of Figure \ref{fig:simple_vs_hysteretic_2} illustrates how the regime is related to the control variable.
+Note that the control variable can also be $y$ itself, in which case the model is referred to as a self-exciting TAR (SETAR) model.
+The left panel of Figure \ref{fig:simple_vs_hysteretic} illustrates how the regime is related to the control variable.
 
 \begin{figure}
 \centering
-\includegraphics[scale=0.4]{simple_vs_hysteretic_2}
+\includegraphics[scale=0.4]{simple_vs_hysteretic}
 \caption{Regime switching in the TAR model (left) and in the HysTAR model (right). On the $y$-axis, we see the regimes, which can be 0 or 1. On the $x$-axis, we see the control variable. 
 The black lines represents which regime is active for different levels of the control variable. The dotted arrows represent the sudden jumps between regimes.
 For simple switches between regime 0 and 1, there is one threshold, $r$. For hysteretic switching, the switch from 0 to 1 has a threshold of $r_1$ and the switch from 1 to 0 has a threshold of $r_0$. Note that both regimes are possible when the control variable is between $r_0$ and $r_1$, which is called the hysteresis zone.}
-\label{fig:simple_vs_hysteretic_2}
+\label{fig:simple_vs_hysteretic}
 \end{figure}
 
 The switches between regime 0 and 1 have the same threshold, regardless whether the switch is from regime 0 to 1 or from 1 to 0. 
@@ -203,7 +185,7 @@ R_{t-1} & \mathrm{if} \, r_0 < z_{t-d} \le r_1 \\
 \end{cases}
 \end{equation}
 
-In this equation, the regime $R_t$ remains unchanged when $z_{t-d}$ enters the \textit{hysteresis zone} $(r_0, r_1]$, which leads to the hysteresis effect. In the Figure \ref{fig:simple_vs_hysteretic_2}, it is illustrated how the HysTAR model differs from the TAR model.
+In this equation, the regime $R_t$ remains unchanged when $z_{t-d}$ enters the \textit{hysteresis zone} $(r_0, r_1]$, which leads to the hysteresis effect. In the Figure \ref{fig:simple_vs_hysteretic}, it is illustrated how the HysTAR model differs from the TAR model.
 That is, a switch from regime 0 to regime 1 happens when $z_{t-d}$ crosses $r_1$, but for a switch back from regime 1 to regime 0, $z_{t-d}$ has to cross the lower threshold $r_0$.
 Note that the HysTAR model is equivalent to the TAR model if $r_0 = r_1$; hence, the TAR model is nested under the HysTAR model.
 
@@ -273,7 +255,7 @@ However, when one of the AR orders is larger than the delay, there might be obse
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=.6]{unknown_start.png}
+\includegraphics[scale=.6]{unknown_start}
 \caption{\textit{Two situations where we want to determine the regime at time point $k$. 
 If $k = d$, then $z_{k-d-1} = z_{-1}$ is unobserved. Hence, $R_{k-1}$ cannot be determined, so $R_{k}$ can also not be determined. We tackle this scenario by estimating the parameters twice, once while assigning $R_k = 0$, and a second time while assigning $R_k = 1$. Then, we choose the solution that yields the smallest sum of squared errors.
 If $k > d$, we can have an interesting situation, since we have observations before $z_{k-d}$. 
@@ -289,16 +271,16 @@ In that case, the convention is to choose the smallest $d$, which is more parsim
 
 \subsection{Parameter inference}
 To draw conclusions about the parameter estimates, we need standard errors of the (asymptotic) sampling distributions of the estimators.
-The estimator of the $\phi$-parameters are asymptotically normal \citep{bar2}, and we can obtain their standard errors analytically (see Appendix \ref{app:inference}).
+The estimator of the $\phi$-parameters are asymptotically normal, and we can obtain their standard errors analytically \citep{bar2}.
 The delay parameter $d$ is an integer, so $\hat{d}$ will equal $d$ when $T$ is large \citep{bar2}.
 For the threshold parameters, however, we face a challenge, that is also known from threshold inference in the TAR model. 
 The limiting distribution of $\hat{r}$ does not have a closed form and numerical approximation of this distribution is difficult \citep{bar2, li_least_2012}.
-As a result, standard errors are not provided for $\hat{r}$ in the \texttt{hystar} package \citep[these are also not provided for the \texttt{mTAR}-function to estimate the standard TAR model in the \textsf{R}-package \texttt{NTS}, ][]{R_NTS}. 
+As a result, standard errors are not provided for $\hat{r}$ in the \texttt{hystar} package \citep[these are also not provided for the \texttt{mTAR}-function to estimate the standard TAR model in the \textsf{R}-package \texttt{NTS},][]{R_NTS}. 
 To still gain some insight in how the threshold estimator behaves, we conducted a simulation study, which is described in Section \ref{sec:simulation_study_1}.
 
 \subsection{Order selection}
 \label{sec:selecting_AR_orders}
-We can use information criteria to select the AR orders $p_0$ and $p_1$ \citep[see ][ for an overview of information criteria in the context of threshold models]{information_criteria_tar}. 
+We can use information criteria to select the AR orders $p_0$ and $p_1$ \citep[see][for an overview of information criteria in the context of threshold models]{information_criteria_tar}. 
 Then, we can select the orders that minimize the Akaike information criterion (AIC)
 
 \begin{equation}
@@ -329,7 +311,7 @@ So, we need an alternative approach to assess whether hysteresis is present in t
 In the current paper, we propose to estimate information criteria for both models, and select the model with smaller values.
 Note that the information criteria presented in Section \ref{sec:selecting_AR_orders} do not penalize the threshold parameter(s), and that the HysTAR model has one threshold parameter more than the TAR model.
 Ignoring this difference may lead to overfitting of the HysTAR model.
-Therefore, we adopt an AIC-type information criterion that was derived for change point models \citep[AICcp][]{aiccp}. The TAR and HysTAR model are closely related to change point models, since change point models are TAR models where $z = (0, 1, \dots, T-1)$. In the AICcp, the penalty of a threshold parameter is 6, that is,
+Therefore, we adopt an AIC-type information criterion that was derived for change point models \citep[AICcp,][]{aiccp}. The TAR and HysTAR model are closely related to change point models, since change point models are TAR models where $z = (0, 1, \dots, T-1)$. In the AICcp, the penalty of a threshold parameter is 6, that is,
 
 \begin{equation}
 \label{eq:aiccp}
@@ -355,7 +337,7 @@ These questions are addressed in simulation study 1.
 In simulation study 1, we considered the following conditions: 50, 100, 200 and 400 time points, 2, 5, and 10 regime switches (denoted by $N_{\mathrm{rs}}$), (un)equal means and (un)equal autoregression between the regimes, and hysteresis zones $(0, 0]$, $(-0.25, 0.25]$ and $(-0.5, 0.5]$. For each condition, we generated 500 replications of time series of the control variable $z$ and the outcome variable $y$ from the HysTAR model.
 
 This results in a total of $4 \times 3 \times 3 \times 3 = 108$ conditions.
-To obtain the differences in regimes in means and autoregression, we use $\phi = (\phi_{00}, \phi_{01}, \phi_{10}, \phi_{11}) = (0, 0.6, 0, 0.2)$, $(0, 0.6, 3, 0.2)$ and $(0, 0.4, 3, 0.4)$. Note that the means of regime $j$ is given by $\phi_{j0}/(1 - \phi_{0j})$. Although threshold non-linearity with equal means seems improbable, it is possible, and we considered this situation as an edge case.
+To obtain the differences in regimes in means and autoregression, we use $\phi = (\phi_{00}, \phi_{01}, \phi_{10}, \phi_{11}) = (0, 0.6, 0, 0.2)$, $(0, 0.6, 3, 0.2)$ and $(0, 0.4, 3, 0.4)$. Note that the long-run mean of regime $j$ is given by $\phi_{j0}/(1 - \phi_{j1})$. Although threshold non-linearity with equal means seems improbable and also does not imply a unimodal distribution, it is possible. We considered this situation as an edge case, but it is not the typical situation of interest.
 In all conditions, we set the delay parameter to $d = 0$ and use equal residual variances in the regimes, $\sigma_0^2 = \sigma_1^2 = 1$. 
 Furthermore, to control the number of regime switches, the time series of the control variable is a sine wave, oscillating between $-1$ and $1$ the desired number of times.
 Since hysteresis zones are centered around zero in the current setup, this results in an equal amount of observations in both regimes for 2 and 10 switches, and slightly more observations in regime 0 when there are 5 regime switches.
@@ -364,10 +346,10 @@ In Figure \ref{fig:ts_examples}, we give three examples of time series generated
 \begin{figure} 
 \caption{Examples of generated data from the HysTAR model}
 \begin{center}
-\includegraphics[scale=.6]{ts_examples}
+\includegraphics[scale=.75]{simulation_examples}
 \end{center}
 \bigskip
-\small\textit{Note}. Each of the examples have a different number of regime switches, a different hysteresis zone and a different difference between the regimes, from top to bottom: 1) 2 switches, $r = (0, 0]$, equal mean - unequal autoregression. 2) 5 switches, $r = (-0.25, 0.25]$, unequal mean - unequal autoregression. 3) 10 switches, $r = (-0.5, 0.5]$, unequal mean - equal autoregression. For all examples, $T = 100$. Plots were generated with the \texttt{hystar} package in \textsf{R}, and code to create the plots can be found in the supplementary material.
+\small\textit{Note}. White background = regime 0, grey background = regime 1. Each of the examples have a different number of regime switches, a different hysteresis zone and a different difference between the regimes, from top to bottom: 1) 2 switches, $r = (0, 0]$, equal mean - unequal autoregression. 2) 5 switches, $r = (-0.25, 0.25]$, unequal mean - unequal autoregression. 3) 10 switches, $r = (-0.5, 0.5]$, unequal mean - equal autoregression. For all examples, $T = 100$. Plots were generated with the \texttt{hystar} package in \textsf{R}, and code to create the plots can be found in the supplementary material.
 \label{fig:ts_examples}
 \end{figure}
 
@@ -378,7 +360,7 @@ Additionally, we conduct the Ljung-Box test on the residuals of both models, to 
 A significant result from the Ljung-Box test implies that the residuals are correlated, and hence, a model does not capture the dependencies in the data well.
 We select a model when the $p$-value of its Ljung-Box test is non-significant ($>0.05$) and for the other model it is significant. Otherwise, we consider neither model to be preferred over the other.
 
-In fitting the models, we assume the orders of the regimes known, because we want to focus on model selection between the HysTAR and the TAR model rather than order selection, which is also typically done by comparing information criteria. 
+In fitting the models, we assume the orders of the regimes known, because we want to focus on model selection between the HysTAR and the TAR model rather than order selection, which is also typically done by comparing information criteria.
 We also assume the delay parameter known. 
 In our simulations, the HysTAR model is equivalent to a TAR model with very large delay, since the the control variable moves symetrically around the hysteresis zone.
 Therefore, fixing the delay parameter to zero will lead to a clear distinction between the HysTAR and TAR model.
@@ -430,7 +412,7 @@ We also check coverage rates of the confidence intervals, that is, the proportio
 \begin{figure}
 \caption{Empirical bias and variance of $r = (-0.25, 0.25]$ (top pane) and $r = (-0.5, 0.5]$ (bottom pane)}
 \begin{center}
-\makebox[0pt]{\includegraphics[scale=.75]{simulation_results_r0_r1}}
+\makebox[0pt]{\includegraphics[scale=.65]{simulation_results_r0-r1}}
 \end{center}
 \bigskip
 \textit{Note}. (un)eq-(un)eq = (un)equal means-(un)equal autoregression. The bias is $N_R^{-1} \sum (\hat{r}_j - r_j)$ and the variance is $N_R^{-1} \sum (\hat{r}_j - \bar{r}_j)^2$, where the number of replications $N_R$ in each condition is 500, $\bar{r}_j$ denotes the mean of the estimates and $j \in \{0, 1\}$ denotes the regime. Code to reproduce this plot can be found in the supplementary materials.
@@ -481,8 +463,9 @@ The authors found support for a hysteresis effect in these switches by fitting t
 
 In the current study, we replicated the simulation by \citet{cramer_major_2016} with 1000 time points. 
 We used the same network (same nodes and connections), which was based on empirical data \citep{network_data}. 
-The stress levels were varied between -1 and 1. 
-We estimated the HysTAR model with $d_{\max} = 1$, $p_0 = p_1 = 1$  and a threshold search space in the 80\% inner sample range of stress, which were stress levels between -0.947 and 0.947.
+The stress levels were varied between -1 and 1.
+Since the control variable is completely known here, we do not estimate $d$ here, but fix it to zero.
+We further estimated the HysTAR model with fixed orders of 1 and a threshold search space in the 80\% inner sample range of stress, which were stress levels between -0.947 and 0.947.
 The $\mathsf{R}$-code that was used to run the simulation can be found in the supplementary materials.
 
 \subsection{Results}
@@ -498,43 +481,15 @@ Notably, these dynamic differences as captured by the autoregressive parameters 
 
 \begin{figure} 
 \begin{center}
-\includegraphics[scale=.6]{ts_plot_MD}
+\includegraphics[scale=.7]{MD_plot}
 \caption{\textit{Time series plots of stress and depression, simulated from a network model. The dashed lines represent the estimates threshold values of the HysTAR model. The grey background represents the depressed regime and the white background represents the healthy regime.}}
 \label{fig:ts_plot_MD}
 \end{center}
 \end{figure}
 
-\begin{table}[h!]
-\begin{center}
-\begin{tabular}{ c c c c c }
-\hline
- & \multicolumn{2}{c}{HysTAR} & \multicolumn{2}{c}{TAR} \\
- \hline
-Parameter & Est. & 95\% CI & Est. & 95\% CI \\
-\hline
-$\phi_{00}$ & 0.23 & $[0.14, 0.31]$ & 0.206 & $[0.12, 0.29]$ \\
-$\phi_{01}$ & 0.73 & $[0.68, 0.78]$ & 0.677 & $[0.62, 0.73]$ \\
-$\phi_{10}$ & 1.00 & $[0.64, 1.36]$ & 0.414 & $[0.21, 0.62]$ \\
-$\phi_{11}$ & 0.89 & $[0.85, 0.93]$ & 0.944 & $[0.92, 0.97]$ \\
-$r_0$ & -0.30 & - & -0.30 & - \\
-$r_1$ & 0.55 & - & -0.30 & - \\
-$d$ & 0 & - & 1 & - \\
-$\sigma_0$ & 0.70 & - & 0.58 & - \\
-$\sigma_1$ & 1.93 & - & 1.79 & - \\
-\multicolumn{5}{c}{Information criteria} \\
-\hline
-AIC  & 116.19 & - & 136.59 & - \\
-AICc & 116.28 & - & 136.69 & - \\
-BIC  & 141.44 & - & 161.76 & - \\
-AICcp & 128.19 & - & 142.59 & - \\
-\hline
-\end{tabular}
-\caption{Parameter estimates of the HysTAR model and TAR model on data simulated from an empirical depression model, $T = 1000$.}
-\label{tab:results_MD}
-\end{center}
-\end{table}
+\input{tables/MD_table.tex}
 
-\section{Empirical example: Speed-accuracy Trade-off} \label{sec:empirical_example_2}
+\section{Empirical example: Speed-accuracy Trade-off} \label{sec:empirical_example}
 The HysTAR model has been succesfully applied to economic time series, such as growth rates of stocks and prices \citep{tsay}, daily number of stock trades \citep{liu}, air pollution \citep{chen} and quarterly GDP growth \citep{bar2}. However, the HysTAR model has not been used to investigate hysteresis in psychological processes, so far.
 
 Therefore, we reanalyzed data from the speed-accuracy trade-off experiment by \citet[][experiment 1b]{speedaccuracy}, which were originally analyzed with a hidden Markov model, with the HysTAR model \footnote{We received permission to reuse these data from the Ethics Committee of the Faculty of Social and Behavioural Sciences of Utrecht University (23-0107).}.
@@ -552,7 +507,7 @@ For further details about the experimental setup, see \citet{speedaccuracy}.
 \subsection{Data analysis}
 Both participants completed two sessions (0 and 1), with 671 and 497 trials and 420 and 553 trials, respectively.
 We fit the HysTAR model to the log response times from each session separately, with $P^{\mathrm{AC}}_t$ as the control variable. 
-We considered an autoregressive model of order 1 for both regimes and a maximum delay of 1.
+We considered an autoregressive model of order 1 for both regimes and did not estimate the delay parameter.
 The search space of the thresholds was restricted to the inner 80\% sample range of $P^{\mathrm{AC}}_t$.
 
 \subsection{Results}
@@ -584,7 +539,7 @@ R_{t-1} & \mathrm{if} \, P^{\mathrm{AC}}_{t} \in \{7, \dots, 12\} \\
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=.5]{ts_plot_SAT}
+\includegraphics[scale=.7]{SAT_plot_I0}
 \caption{\textit{Time series plot of response time as the outcome variable and payoff for accuracy as the control variable in a speed-accuracy trade-off experiment. The guess regime is in white and the stimulus-controlled regime is in grey.}}
 \label{fig:ts_plot_SAT}
 \end{center}
@@ -634,11 +589,13 @@ This study is part of a project that has received funding from the European Rese
 \appendix
  
 \section{Least squares estimation of $\phi$ given $r$ and $d$}
+\label{app:estimation}
 
-\subsection{Estimation} \label{app:estimation}
 Let $y = (y_k, \dots, y_T)$.
 Let
-$$X := \begin{pmatrix}
+\begin{center}
+\resizebox{\textwidth}{!}{
+$X := \begin{pmatrix}
 1 - R_k & (1 - R_k) y_{p_0} &  \dots & (1 - R_k) y_1 &
 R_k & R_k y_{p_1} & \dots & R_k y_1 \\
 1 - R_{k+1} & (1 - R_{k+1}) y_{p_0+1} & \dots & (1 - R_{k+1}) y_2 &
@@ -647,7 +604,9 @@ R_{k+1} & R_{k+1} y_{p_1+1} & \dots & R_{k+1} y_2 \\
 \vdots & \vdots & \ddots & \vdots \\
 1 - R_T & (1 - R_T) y_T & \dots & (1 - R_T) y_{T-p_0} &
 R_T & R_T y_T & \dots & R_T y_{T-p_1} \\
-\end{pmatrix}$$
+\end{pmatrix}$}
+\end{center}
+
 
 denote the design matrix and let
 $\hat{\phi} = (\hat{\phi}_{00}, \dots, \hat{\phi}_{0 p_0}, \hat{\phi}_{10}, \dots, \hat{\phi}_{1 p_1})^\prime$
@@ -660,97 +619,13 @@ is minimized by
 $$\hat{\phi} = \argmin\limits_{\phi} L(\phi, r, d) = 
 (X^\prime X)^{-1} X^\prime y.$$
 
-\subsection{Inference} \label{app:inference}
-\textcolor{red}{Ik moet dit nog even beter opschrijven. Het is te doen, maar ik heb er iets meer tijd voor nodig, want het zit blijkbaar toch iets ingewikkelder dan hieronder staat.}
+See \citet{bar2} for details.
 
-Let $\phi$ denote the true parameter of coefficients. Let $x_t = (1, y_{t-1}, \dots, y_{t-p})$.
-Then, under Assumptions 1-4 mentioned in \textit{Section 3.2} in \citet{bar2}, 
-$$T^{-\frac{1}{2}} (\hat{\phi} - \phi) \rightarrow \mathcal{N} \left( 0, \mathrm{diag}(\sigma_0^2 \Sigma_0^{-1}, \sigma_1^2 \Sigma_1^{-1}) \right)$$
-in distribution as $T \rightarrow \infty$, where
-$\Sigma_0^{-1} = \E[x_t x_t^\prime (1-R_t)]$ and 
-$\Sigma_1^{-1} = \E[x_t x_t^\prime R_t].$
-
-The 95\% confidence intervals of are obtained by
-$\hat{\phi} - 1.96 \sqrt{\mathrm{diag}(\sigma_0^2 \Sigma_0^{-1}, \sigma_1^2 \Sigma_1^{-1})}$ as the lower bound and 
-$\hat{\phi} + 1.96 \sqrt{\mathrm{diag}(\sigma_0^2 \Sigma_0^{-1}, \sigma_1^2 \Sigma_1^{-1})}$ as the upper bound.
-
-\section{Results from SAT experiment}
+\newpage
+\section{Results from SAT experiments}
 \label{app:results_SAT}
 
-\begin{table}[h!]
-\begin{center}
-\begin{tabular}{ l  c c  c c c c c c }
-\hline
- & 
- \multicolumn{2}{c}{Part. 1, Session 1} 
- & \multicolumn{2}{c}{Part. 1, Session 2} 
- & \multicolumn{2}{c}{Part. 2, Session 1} 
- & \multicolumn{2}{c}{Part. 2, Session 2} \\
- \cline{2-9}
-Parameter 
-& Est. & 95\% CI 
-& Est. & 95\% CI 
-& Est. & 95\% CI 
-& Est. & 95\% CI \\ 
-\hline
-$\phi_{00}$ 
-& 7.28 & $[6.46, 8.11]$ 
-& 4.82 & $[4.05, 5.59]$ 
-& 5.98 & $[4.93, 7.03]$
-& 6.26 & $[5.27, 7.26]$ \\
-$\phi_{01}$ 
-& 0.08 & $[-0.03, 0.18]$ 
-& 0.38 & $[0.28, 0.48]$
-& 0.23 & $[0.10, 0.37]$
-& 0.20 & $[0.07, 0.32]$ \\
-$\phi_{10}$ 
-& 5.21 & $[4.44, 5.97]$ 
-& 5.51 & $[4.73, 6.29]$
-& 3.54 & $[2.68, 4.40]$
-& 4.72 & $[3.96, 5.48]$ \\
-$\phi_{11}$ 
-& 0.39 & $[0.30, 0.48]$ 
-& 0.35 & $[0.26, 0.44]$
-& 0.58 & $[0.48, 0.68]$
-& 0.44 & $[0.35, 0.53]$ \\
-$r_0$ 
-& 8.5 & - 
-& 10.5 & -  
-& 6.5 & -  
-& 9.5 & - \\
-$r_1$ 
-& 10.5 & - 
-& 11.5 & -
-& 12.5 & -
-& 11.5 & - \\
-$d$ 
-& 0 & - 
-& 0 & -
-& 0 & -
-& 0 & -\\
-$\sigma_0$ 
-& 0.06 & - 
-& 0.05 & -
-& 0.11 & -
-& 0.13 & - \\
-$\sigma_1$ 
-& 0.07 & - 
-& 0.04 & - 
-& 0.10 & - 
-& 0.10 & - \\
-\multicolumn{9}{c}{Information criteria} \\
-\hline
-Criterium 	& TAR 	& HysTAR 	& TAR 	& HysTAR 	& TAR 	& HysTAR 	& TAR 	& HysTAR \\
-\hline
-AIC 			& -1845 	& -1853 		& -1532 	& -1562 	 	& -919	& -921		& -1185	& -1194  \\
-AICc 		& -1845 	& -1853 		& -1531 	& -1562 		& -919	& -921		& -1185	& -1194  \\
-BIC 			& -1822 	& -1830 		& -1511	& -1541		& -899	& -901		& -1163 & -1173  \\
-AICcp 		& -1839 	& -1841 		& -1526 	& -1540 	 	& -913	& -909		& -1179	& -1182  \\
-\hline
-\end{tabular}
-\caption{Point estimates and confidence intervals of the parameters of the HysTAR model for participants and sessions. Additionally, the table presents estimates of information criteria for the TAR and HysTAR model, where a lower value indicates preference of one model over the other.}
-\end{center}
-\end{table}
+\input{tables/SAT_table.tex}
 
 %\end{multicols}
 

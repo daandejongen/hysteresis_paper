@@ -13,8 +13,8 @@ plot_simulation_results <- function(parameters,
   )
 
   if (save) {
-    pdf(file = paste0("simulation_studies/output/simulation_results_",
-                      r1_condition, "_", paste(parameters, sep = "-"), ".pdf"),
+    pdf(file = paste0("manuscript/images/simulation_results_",
+                      r1_condition * 100, "_", paste0(parameters, collapse = "-"), ".pdf"),
         width = plot_width * 3,
         height = plot_height * 2)
   }

@@ -1,5 +1,5 @@
 plot_MD_data <- function() {
-  pdf(file = "manuscript/images/time_series_plot_MD.pdf",
+  pdf(file = "manuscript/images/MD_plot.pdf",
     width = 7, height = 4)
   plot(fit_hystar,
      main = "Depression time series from a network model",

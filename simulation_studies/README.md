@@ -4,7 +4,7 @@ The current study consists of two simulation studies, one on model selection and
 
 * `create_table.R` to collect finite-sample performance measures (bias, variance, etc.) of estimator(s) into an R-matrix. This is for a single setting of the hysteresis zone $r \in \{(0, 0], (-0.25, 0.25], (-0.5, 0.5]\}$. The other settings, number of time points `n_t`, number of switches `n_switches` and $\phi$-values, are distributed over the rows and columns.
 
-* `generate_example_plots.R` defines a function to create the figure in the paper with three examples of simulated time series from the HysTAR model.
+* `plot_examples.R` defines a function to create the figure in the paper with three examples of simulated time series from the HysTAR model.
 
 * `outcome_measures.R` defines functions to compute finite-sample performance of the estimators, like bias, variance, mean squared error, confidence interval coverage rate. Additionally, it contains functions to select the model (TAR vs. HysTAR) based on information criteria or the Ljung-Box test for no autocorrelation on the predictive residuals.
 

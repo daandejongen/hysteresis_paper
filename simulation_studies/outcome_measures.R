@@ -1,5 +1,3 @@
-# Functions to compute things like the bias, MSE, coverage rate, et cetera.
-
 compute_outcomes <- function(type = c("bias", "variance", "mse")) {
   parameters <- c("phi00", "phi01", "phi10", "phi11", "r0", "r1")
   n_conditions <- nrow(conditions_overview)
@@ -127,42 +125,6 @@ compute_model_selections_lbox <- function(alpha = 0.05) {
   return(results)
 }
 
-compute_main_effect <- function(outcomes, condition_variable) {
-  levels <- unique(conditions_overview[, condition_variable])
-  return(sapply(
-    levels,
-    FUN = function(x) {
-      colMeans(outcomes[conditions_overview[, condition_variable] == x, ])
-      }
-    )
-  )
-}
-
-aiccp_bic_agreement <- function(which_hystar = c(0.25, 0.5),
-                                n_t = c(50, 100, 200, 400),
-                                n_switches = c(2, 5, 10)) {
-  # Model selection for equal means between the regimes.
-  selected_conditions <- conditions_overview[, "phi_label"] == 1 &
-    conditions_overview[, "r1"] %in% c(0, which_hystar) &
-    conditions_overview[, "n_t"] %in% n_t &
-    conditions_overview[, "n_switches"] %in% n_switches
-  select_hystar <-
-    (estimates[selected_conditions, "aiccp_hystar", ] >
-    estimates[selected_conditions, "aiccp_tar", ] |
-    estimates[selected_conditions, "bic_hystar", ] >
-    estimates[selected_conditions, "bic_tar", ]) &
-    !((estimates[selected_conditions, "aiccp_hystar", ] >
-        estimates[selected_conditions, "aiccp_tar", ]) ==
-        (estimates[selected_conditions, "bic_hystar", ] >
-        estimates[selected_conditions, "bic_tar", ]))
-  is_hystar <- conditions[selected_conditions, "r0", ] == 0
-
-  true_positives <- sum(select_hystar & is_hystar)
-  precision <- true_positives / sum(select_hystar)
-  recall <- true_positives / sum(is_hystar)
-
-  return(c("precision" = precision, "recall" = recall))
-}
 
 
 

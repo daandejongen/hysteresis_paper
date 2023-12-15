@@ -23,9 +23,10 @@ MD_data <- simulate_depression_time_series(
 )
 
 saveRDS(MD_data, "major_depression/simulated_MD_data.RDS")
+MD_data <- readRDS("major_depression/simulated_MD_data.RDS")
 
-fit_hystar <- hystar_fit(MD_data, d = 0:1, tar = FALSE)
-fit_tar    <- hystar_fit(MD_data, d = 0:1, tar = TRUE)
+fit_hystar <- hystar_fit(MD_data, d = 0, tar = FALSE)
+fit_tar    <- hystar_fit(MD_data, d = 0, tar = TRUE)
 
 Box.test(fit_hystar$residuals_st, type = "L", lag = 1)
 Box.test(fit_tar$residuals_st, type = "L", lag = 1)
