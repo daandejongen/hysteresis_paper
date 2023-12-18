@@ -13,7 +13,8 @@ plot_SAT_data <- function(model, save_plot = TRUE) {
                      participant_name, " session ", session_name),
        zlab = "Acc. Payoff",
        ylab = "Resp. time",
-       xlab = "Trial")
+       xlab = "Trial",
+       show_legend = FALSE)
 
   if (save_plot) dev.off()
 

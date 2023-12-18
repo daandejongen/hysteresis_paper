@@ -2,6 +2,7 @@
 # 'Detecting hysteresis with the HysTAR model' about major depression
 # time series simulated from a network model.
 
+rm(list = ls())
 library("hystar")
 source("major_depression/simulate_MD_data.R")
 source("major_depression/plot_MD_data.R")
