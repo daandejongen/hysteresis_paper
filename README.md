@@ -1,6 +1,6 @@
 # Detecting hysteresis in psychological processes with the hysteretic threshold autoregressive (HysTAR) model
 
-Repository with all materials to (re)produce the paper "Detecting hysteresis in psychological processes with the hysteretic threshold autoregressive (HysTAR) model".
+Repository with all materials to (re)produce the paper "Detecting hysteresis in psychological processes with the hysteretic threshold autoregressive (HysTAR) model". (OSF PsyArchiv Pre-print [here](https://osf.io/preprints/psyarxiv/zrcft))
 
 ## Required software (all free and open-source)
 
