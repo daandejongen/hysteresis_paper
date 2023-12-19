@@ -21,3 +21,18 @@ The top folder consists of the following folders and files:
 
 * `simulation_studies/`, `major_depression/`, and `speed_accuracy_trade_off/` contain the materials to (re)produce the simulations and analyses of the current study, they have their own README file.
 
+## Cite
+
+To cite this paper, you can use this in BibTeX:
+```
+@article{detecting_hysteresis,
+  title={Detecting hysteresis in psychological processes with the hysteretic threshold autoregressive (HysTAR) model},
+  author={De Jong, Daan and Ryan, Ois\'{i}n and Van der Maas, Han L. J. and Hamaker, Ellen L.},
+  year = {2019},
+  publisher = {PsyArXiv},
+  doi = {10.31234/osf.io/zrcft}
+}
+```
+Or copy this:
+
+de Jong, D., Ryan, O., van der Maas, H. L. J., & Hamaker, E. L. (2023). Detecting hysteresis in psychological processes with the hysteretic threshold autoregressive (HysTAR) model. https://doi.org/10.31234/osf.io/zrcft
